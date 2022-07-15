@@ -1,6 +1,6 @@
 ﻿namespace AgendaContactos
 {
-    partial class Form1
+    partial class VisualizarContactos
     {
         /// <summary>
         /// Required designer variable.
