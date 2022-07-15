@@ -10,11 +10,13 @@ using System.Windows.Forms;
 
 namespace AgendaContactos
 {
-    public partial class InfomacionContacto : Form
+    public partial class InformacionContacto : Form
     {
-        public InfomacionContacto(int id)
+        int id;//Id del contacto cuyos datos se mostraran en este formulario
+        public InformacionContacto(int id)
         {
             InitializeComponent();
+            this.id = id;
         }
     }
 }
