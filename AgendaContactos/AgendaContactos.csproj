@@ -49,6 +49,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Categorias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Categorias.Designer.cs">
+      <DependentUpon>Categorias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImportarExportar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportarExportar.Designer.cs">
+      <DependentUpon>ImportarExportar.cs</DependentUpon>
+    </Compile>
     <Compile Include="InformacionContacto.cs">
       <SubType>Form</SubType>
     </Compile>
