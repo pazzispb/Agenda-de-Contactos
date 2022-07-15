@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace AgendaContactos
 {
-    public partial class InfomacionContacto : Form
+    public partial class InformacionContacto : Form
     {
-        public InfomacionContacto(int id)
+        public InformacionContacto(int id)
         {
             InitializeComponent();
         }

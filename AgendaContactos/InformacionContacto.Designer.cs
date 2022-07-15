@@ -1,6 +1,6 @@
 ﻿namespace AgendaContactos
 {
-    partial class InfomacionContacto
+    partial class InformacionContacto
     {
         /// <summary>
         /// Required designer variable.
