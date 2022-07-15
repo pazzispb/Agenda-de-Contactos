@@ -49,6 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="InfomacionContacto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InfomacionContacto.Designer.cs">
+      <DependentUpon>InfomacionContacto.cs</DependentUpon>
+    </Compile>
     <Compile Include="Json.cs" />
     <Compile Include="Modelos\Categoria.cs" />
     <Compile Include="Modelos\Contacto.cs" />
