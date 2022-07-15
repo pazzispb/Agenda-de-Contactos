@@ -12,9 +12,11 @@ namespace AgendaContactos
 {
     public partial class InformacionContacto : Form
     {
+        int id;//Id del contacto cuyos datos se mostraran en este formulario
         public InformacionContacto(int id)
         {
             InitializeComponent();
+            this.id = id;
         }
     }
 }
