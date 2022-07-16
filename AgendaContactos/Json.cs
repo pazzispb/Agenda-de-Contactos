@@ -22,6 +22,8 @@ namespace AgendaContactos
             if (archivo != "contactos" && archivo != "categorias") //valida que el parametro concuerde con algunos de los archivos json del proyecto
                 return null;
             var ruta = $"{directorioBase}//{archivo}.json"; //forma la ruta del archivo json a leer
+            if (!File.Exists(ruta)) //si el archivo no existe
+                return null;
             return File.ReadAllText(ruta); //returna su contenido
         }
         public List<Contacto> ObtenerContactos()
