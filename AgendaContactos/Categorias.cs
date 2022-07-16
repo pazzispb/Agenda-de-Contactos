@@ -16,11 +16,19 @@ namespace AgendaContactos
         bool adding = true; //true si se va a agregar o false si se va a modificar una categoria
         Categoria categoria = null; //Categoria a eliminar o actualizar
         List<Categoria> listadoCategoria;
+        
         public Categorias()
         {
             InitializeComponent();
             dgvCategorias.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;//Permite que las columnas se ajuste el ancho de manera automatica
             SetEstadoInicial();
+            ConfigurarFormulario();
+        }
+        void ConfigurarFormulario()
+        {
+            int x = (this.Width / 2) - (panel.Width / 2);
+            int y = (this.Height / 2) - (panel.Height / 2);
+            panel.Location = new Point(x, y);
         }
         void SetEstadoInicial()
         {
@@ -128,6 +136,11 @@ namespace AgendaContactos
                 json.GuardarCategorias(listadoCategoria);
                 SetEstadoInicial();
             }
+        }
+
+        private void Categorias_SizeChanged(object sender, EventArgs e)
+        {
+            ConfigurarFormulario();
         }
     }
 }

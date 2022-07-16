@@ -39,10 +39,10 @@
             this.btnBorrar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel = new System.Windows.Forms.Panel();
             this.gbDatos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCategorias)).BeginInit();
-            this.panel1.SuspendLayout();
+            this.panel.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbDatos
@@ -166,33 +166,34 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "Manejo de categorias";
             // 
-            // panel1
+            // panel
             // 
-            this.panel1.Controls.Add(this.dgvCategorias);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.gbDatos);
-            this.panel1.Controls.Add(this.btnCancelar);
-            this.panel1.Controls.Add(this.btnGuardar);
-            this.panel1.Controls.Add(this.btnBorrar);
-            this.panel1.Location = new System.Drawing.Point(12, 12);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(503, 439);
-            this.panel1.TabIndex = 6;
+            this.panel.Controls.Add(this.dgvCategorias);
+            this.panel.Controls.Add(this.label3);
+            this.panel.Controls.Add(this.gbDatos);
+            this.panel.Controls.Add(this.btnCancelar);
+            this.panel.Controls.Add(this.btnGuardar);
+            this.panel.Controls.Add(this.btnBorrar);
+            this.panel.Location = new System.Drawing.Point(12, 12);
+            this.panel.Name = "panel";
+            this.panel.Size = new System.Drawing.Size(503, 439);
+            this.panel.TabIndex = 6;
             // 
             // Categorias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(538, 463);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel);
             this.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "Categorias";
             this.Text = "Categorias";
+            this.SizeChanged += new System.EventHandler(this.Categorias_SizeChanged);
             this.gbDatos.ResumeLayout(false);
             this.gbDatos.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCategorias)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.panel.ResumeLayout(false);
+            this.panel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -210,6 +211,6 @@
         private System.Windows.Forms.Button btnBorrar;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel;
     }
 }
