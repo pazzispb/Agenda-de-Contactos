@@ -97,8 +97,14 @@
     <Compile Include="VisualizarContactos.Designer.cs">
       <DependentUpon>VisualizarContactos.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AgregarContacto.resx">
+      <DependentUpon>AgregarContacto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Categorias.resx">
       <DependentUpon>Categorias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InformacionContacto.resx">
+      <DependentUpon>InformacionContacto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MenuPrincipal.resx">
       <DependentUpon>MenuPrincipal.cs</DependentUpon>

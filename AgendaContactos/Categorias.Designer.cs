@@ -58,7 +58,7 @@
             this.gbDatos.Font = new System.Drawing.Font("Montserrat", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbDatos.Location = new System.Drawing.Point(28, 67);
             this.gbDatos.Name = "gbDatos";
-            this.gbDatos.Size = new System.Drawing.Size(537, 146);
+            this.gbDatos.Size = new System.Drawing.Size(544, 146);
             this.gbDatos.TabIndex = 0;
             this.gbDatos.TabStop = false;
             this.gbDatos.Text = "Datos de la categoria";
@@ -72,7 +72,7 @@
             this.txtDescripcion.Location = new System.Drawing.Point(105, 75);
             this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(406, 49);
+            this.txtDescripcion.Size = new System.Drawing.Size(413, 49);
             this.txtDescripcion.TabIndex = 4;
             // 
             // label2

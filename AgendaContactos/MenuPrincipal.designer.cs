@@ -84,7 +84,7 @@
             this.btnContactos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnContactos.Font = new System.Drawing.Font("Montserrat Medium", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnContactos.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnContactos.IconChar = FontAwesome.Sharp.IconChar.PeopleGroup;
+            this.btnContactos.IconChar = FontAwesome.Sharp.IconChar.Plus;
             this.btnContactos.IconColor = System.Drawing.Color.White;
             this.btnContactos.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnContactos.IconSize = 30;
