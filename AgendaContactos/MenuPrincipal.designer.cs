@@ -176,7 +176,7 @@
             this.ForeColor = System.Drawing.SystemColors.Desktop;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MenuPrincipal";
-            this.Text = "Form1";
+            this.Text = "Agenda de Contactos";
             this.panelSideMenu.ResumeLayout(false);
             this.panePhoto.ResumeLayout(false);
             this.ResumeLayout(false);
