@@ -60,7 +60,6 @@ namespace AgendaContactos
                 MessageBox.Show("Rellene los campos vacios", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            
             if (!ValidarNombreUnico(txtNombre.Text)) //si no es unico
             {
                 MessageBox.Show("El nombre que introdujo ya existe", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -110,6 +109,7 @@ namespace AgendaContactos
             var json = new Json();
             dgvCategorias.DataSource = null;
             listadoCategoria = json.ObtenerCategorias();
+            if(listadoCategoria == null) listadoCategoria = new List<Categoria>();
             dgvCategorias.DataSource = listadoCategoria;//carga el listado de categorias al datagrid
         }
 
