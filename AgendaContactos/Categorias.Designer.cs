@@ -38,8 +38,11 @@
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnBorrar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.gbDatos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCategorias)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbDatos
@@ -50,7 +53,7 @@
             this.gbDatos.Controls.Add(this.txtNombre);
             this.gbDatos.Controls.Add(this.label1);
             this.gbDatos.Font = new System.Drawing.Font("Montserrat", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbDatos.Location = new System.Drawing.Point(24, 20);
+            this.gbDatos.Location = new System.Drawing.Point(36, 67);
             this.gbDatos.Name = "gbDatos";
             this.gbDatos.Size = new System.Drawing.Size(449, 132);
             this.gbDatos.TabIndex = 0;
@@ -110,7 +113,7 @@
             this.dgvCategorias.AllowUserToAddRows = false;
             this.dgvCategorias.AllowUserToDeleteRows = false;
             this.dgvCategorias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCategorias.Location = new System.Drawing.Point(24, 223);
+            this.dgvCategorias.Location = new System.Drawing.Point(36, 270);
             this.dgvCategorias.Name = "dgvCategorias";
             this.dgvCategorias.ReadOnly = true;
             this.dgvCategorias.RowHeadersWidth = 51;
@@ -122,7 +125,7 @@
             // btnGuardar
             // 
             this.btnGuardar.Font = new System.Drawing.Font("Montserrat", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardar.Location = new System.Drawing.Point(30, 164);
+            this.btnGuardar.Location = new System.Drawing.Point(42, 211);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(125, 43);
             this.btnGuardar.TabIndex = 2;
@@ -134,7 +137,7 @@
             // 
             this.btnBorrar.Enabled = false;
             this.btnBorrar.Font = new System.Drawing.Font("Montserrat", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBorrar.Location = new System.Drawing.Point(183, 164);
+            this.btnBorrar.Location = new System.Drawing.Point(195, 211);
             this.btnBorrar.Name = "btnBorrar";
             this.btnBorrar.Size = new System.Drawing.Size(125, 43);
             this.btnBorrar.TabIndex = 3;
@@ -145,7 +148,7 @@
             // btnCancelar
             // 
             this.btnCancelar.Font = new System.Drawing.Font("Montserrat", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.Location = new System.Drawing.Point(336, 164);
+            this.btnCancelar.Location = new System.Drawing.Point(348, 211);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(125, 43);
             this.btnCancelar.TabIndex = 4;
@@ -153,22 +156,43 @@
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Montserrat SemiBold", 12F, System.Drawing.FontStyle.Bold);
+            this.label3.Location = new System.Drawing.Point(125, 18);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(233, 27);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Manejo de categorias";
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.dgvCategorias);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.gbDatos);
+            this.panel1.Controls.Add(this.btnCancelar);
+            this.panel1.Controls.Add(this.btnGuardar);
+            this.panel1.Controls.Add(this.btnBorrar);
+            this.panel1.Location = new System.Drawing.Point(12, 12);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(503, 439);
+            this.panel1.TabIndex = 6;
+            // 
             // Categorias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(494, 390);
-            this.Controls.Add(this.btnCancelar);
-            this.Controls.Add(this.btnBorrar);
-            this.Controls.Add(this.btnGuardar);
-            this.Controls.Add(this.dgvCategorias);
-            this.Controls.Add(this.gbDatos);
+            this.ClientSize = new System.Drawing.Size(538, 463);
+            this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "Categorias";
             this.Text = "Categorias";
             this.gbDatos.ResumeLayout(false);
             this.gbDatos.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCategorias)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -185,5 +209,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnBorrar;
         private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel panel1;
     }
 }

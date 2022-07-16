@@ -15,6 +15,7 @@ namespace AgendaContactos
     {
         bool adding = true; //true si se va a agregar o false si se va a modificar una categoria
         Categoria categoria = null; //Categoria a eliminar o actualizar
+        List<Categoria> listadoCategoria;
         public Categorias()
         {
             InitializeComponent();
@@ -50,7 +51,6 @@ namespace AgendaContactos
                 MessageBox.Show("Rellene los campos vacios", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            var listadoCategorias = (List<Categoria>)dgvCategorias.DataSource;
             if (dgvCategorias.DataSource == null)
                 listadoCategorias = new List<Categoria>();
             if (!ValidarNombreUnico(txtNombre.Text)) //si no es unico
@@ -66,15 +66,16 @@ namespace AgendaContactos
             };
             if (adding)
             {
-                listadoCategorias.Add(categoria);
+                listadoCategoria.Add(categoria);
             }
             else
             {
-                listadoCategorias[listadoCategorias.IndexOf(this.categoria)].Nombre = categoria.Nombre;
-                listadoCategorias[listadoCategorias.IndexOf(this.categoria)].Descripcion = categoria.Descripcion;
-                listadoCategorias[listadoCategorias.IndexOf(this.categoria)].isVisible = categoria.isVisible;
+                listadoCategoria[listadoCategoria.IndexOf(this.categoria)].Nombre = categoria.Nombre;
+                listadoCategoria[listadoCategoria.IndexOf(this.categoria)].Descripcion = categoria.Descripcion;
+                listadoCategoria[listadoCategoria.IndexOf(this.categoria)].isVisible = categoria.isVisible;
             }
-            json.GuardarCategorias(listadoCategorias);
+            json.GuardarCategorias(listadoCategoria);
+            MessageBox.Show("Cambios guardados con exito", "EXITO", MessageBoxButtons.OK, MessageBoxIcon.Information);
             SetEstadoInicial();
         }
         bool ValidarCamposVacios()//responde a la pregunta de: hay campos obligatorios vacios?
@@ -85,12 +86,14 @@ namespace AgendaContactos
         {
             if (adding)//si se esta agregando una categoria nueva
             {
-                var cantidad = (dgvCategorias.DataSource as List<Categoria>).Count(x=>x.Nombre == nombre);//cuentas categorias con ese mismo nombre hay en el json
+                if (listadoCategoria == null) return true;
+                var cantidad = listadoCategoria.Count(x=>x.Nombre == nombre);//cuentas categorias con ese mismo nombre hay en el json
                 return (cantidad < 1);//true si es unico, false si no lo es
             }
             else
             {
-                var cantidad = (dgvCategorias.DataSource as List<Categoria>).Count(x => (x.Nombre == nombre) && (x.Nombre!=categoria.Nombre));//cuentas categorias con ese mismo nombre hay en el json
+                if (listadoCategoria == null) return true;
+                var cantidad = listadoCategoria.Count(x => (x.Nombre == nombre) && (x.Nombre!=categoria.Nombre));//cuentas categorias con ese mismo nombre hay en el json
                 return (cantidad < 1);//true si es unico, false si no lo es
             }
         }
@@ -98,7 +101,8 @@ namespace AgendaContactos
         {
             var json = new Json();
             dgvCategorias.DataSource = null;
-            dgvCategorias.DataSource = json.ObtenerCategorias();//carga el listado de categorias al datagrid
+            listadoCategoria = json.ObtenerCategorias();
+            dgvCategorias.DataSource = listadoCategoria;//carga el listado de categorias al datagrid
         }
 
         private void dgvCategorias_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -106,7 +110,7 @@ namespace AgendaContactos
             if (e.RowIndex > -1)
             {
                 var nombre = dgvCategorias.CurrentRow.Cells["Nombre"].Value.ToString(); //almacena el nombre de la categoria
-                categoria = (dgvCategorias.DataSource as List<Categoria>).FirstOrDefault(x => x.Nombre == nombre);
+                categoria = listadoCategoria.FirstOrDefault(x => x.Nombre == nombre); //almacena el objeto categoria
                 adding = false;
                 btnBorrar.Enabled = true;
                 txtNombre.Text = nombre;
@@ -121,9 +125,8 @@ namespace AgendaContactos
             var json = new Json();
             if(DialogResult == DialogResult.Yes)
             {
-                var listadoCategorias = (List<Categoria>)dgvCategorias.DataSource; //cargamos el listado de categorias
-                listadoCategorias.Remove(categoria);
-                json.GuardarCategorias(listadoCategorias);
+                listadoCategoria.Remove(categoria);
+                json.GuardarCategorias(listadoCategoria);
                 SetEstadoInicial();
             }
         }
