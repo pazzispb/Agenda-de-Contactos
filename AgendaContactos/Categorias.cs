@@ -51,8 +51,7 @@ namespace AgendaContactos
                 MessageBox.Show("Rellene los campos vacios", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            if (dgvCategorias.DataSource == null)
-                listadoCategorias = new List<Categoria>();
+            
             if (!ValidarNombreUnico(txtNombre.Text)) //si no es unico
             {
                 MessageBox.Show("El nombre que introdujo ya existe", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
