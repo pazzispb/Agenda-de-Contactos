@@ -59,7 +59,6 @@ namespace AgendaContactos
                 MessageBox.Show("Rellene los campos vacios", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            listadoCategoria = json.ObtenerCategorias();
             if (!ValidarNombreUnico(txtNombre.Text)) //si no es unico
             {
                 MessageBox.Show("El nombre que introdujo ya existe", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
