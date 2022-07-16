@@ -238,7 +238,6 @@
             this.lblNombre.Size = new System.Drawing.Size(61, 15);
             this.lblNombre.TabIndex = 2;
             this.lblNombre.Text = "Nombres";
-            this.lblNombre.Click += new System.EventHandler(this.lblCedula_Click);
             // 
             // bttnCancelar
             // 
@@ -334,7 +333,6 @@
             this.lblApodo.Size = new System.Drawing.Size(45, 15);
             this.lblApodo.TabIndex = 26;
             this.lblApodo.Text = "Apodo";
-            this.lblApodo.Click += new System.EventHandler(this.label1_Click);
             // 
             // label3
             // 
@@ -411,7 +409,6 @@
             this.checkBoxIsEmergencia.TabIndex = 41;
             this.checkBoxIsEmergencia.Text = "Contacto de emergencia";
             this.checkBoxIsEmergencia.UseVisualStyleBackColor = true;
-            this.checkBoxIsEmergencia.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // checkBoxIsFavorito
             // 
@@ -425,7 +422,6 @@
             this.checkBoxIsFavorito.TabIndex = 42;
             this.checkBoxIsFavorito.Text = "Contacto favorito";
             this.checkBoxIsFavorito.UseVisualStyleBackColor = true;
-            this.checkBoxIsFavorito.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
             // 
             // lblAgregarContacto
             // 
@@ -452,7 +448,6 @@
             this.Controls.Add(this.gbDatosPersonales);
             this.Name = "AgregarContacto";
             this.Text = "AgregarContacto";
-            this.Load += new System.EventHandler(this.AgregarContacto_Load);
             this.gbDatosPersonales.ResumeLayout(false);
             this.gbDatosPersonales.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).EndInit();
