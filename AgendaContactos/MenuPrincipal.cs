@@ -26,12 +26,14 @@ namespace AgendaContactos
                 panelSideMenu.Width = 100; // ancho de la barra de menu minimizada
                 foreach(Button Menubutton in panelSideMenu.Controls.OfType<Button>()) // para cada objeto del tipo boton dentro de este panel
                 {
+                    pbLogo.Visible = false;
                     Menubutton.Text = ""; // se borran los textos
                     Menubutton.ImageAlign = ContentAlignment.MiddleCenter; //(AUN NO SE AGREGA EL LOGO DE LA APP) 
                     Menubutton.Padding = new Padding(0); // el espacio en los bordes se elimina
                 }
                 foreach (Button Menubutton in panePhoto.Controls.OfType<Button>()) // para cada objetoo de tipo boton dentro de este OTRO panel
                 {
+                    pbLogo.Visible = false;
                     Menubutton.Text = ""; 
                     Menubutton.ImageAlign = ContentAlignment.MiddleCenter;
                     Menubutton.Padding = new Padding(0); // se quita el espacio
@@ -42,12 +44,14 @@ namespace AgendaContactos
                 panelSideMenu.Width = 230; //size de la barra de menu cuando este maximizada 
                 foreach (Button Menubutton in panelSideMenu.Controls.OfType<Button>())
                 {
+                    pbLogo.Visible = true;
                     Menubutton.Text = "  " + Menubutton.Tag.ToString(); // cada boton tiene un tag en propidades que es lo que ira escrito cuando el menu re maximize nuevamente
                     Menubutton.ImageAlign = ContentAlignment.MiddleLeft; //aun no hay logo
                     Menubutton.Padding = new Padding(10,0,0,0); // espacio 
                 }
                 foreach (Button Menubutton in panePhoto.Controls.OfType<Button>())
                 {
+                    pbLogo.Visible = true;
                     Menubutton.Text = "  " + Menubutton.Tag.ToString();
                     Menubutton.ImageAlign = ContentAlignment.MiddleLeft;
                     Menubutton.Padding = new Padding(10, 0, 0, 0); //espacio
@@ -88,5 +92,6 @@ namespace AgendaContactos
         {
             abrirSubFormulario(new Categorias());
         }
+
     }
 }

@@ -28,15 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuPrincipal));
             this.panelSideMenu = new System.Windows.Forms.Panel();
             this.btnCategorias = new FontAwesome.Sharp.IconButton();
             this.btnContactos = new FontAwesome.Sharp.IconButton();
             this.btnPaginaPrincipal = new FontAwesome.Sharp.IconButton();
             this.panePhoto = new System.Windows.Forms.Panel();
+            this.pbLogo = new System.Windows.Forms.PictureBox();
             this.btnMenu = new FontAwesome.Sharp.IconButton();
             this.panelFormHijo = new System.Windows.Forms.Panel();
             this.panelSideMenu.SuspendLayout();
             this.panePhoto.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // panelSideMenu
@@ -48,9 +51,8 @@
             this.panelSideMenu.Controls.Add(this.panePhoto);
             this.panelSideMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelSideMenu.Location = new System.Drawing.Point(0, 0);
-            this.panelSideMenu.Margin = new System.Windows.Forms.Padding(4);
             this.panelSideMenu.Name = "panelSideMenu";
-            this.panelSideMenu.Size = new System.Drawing.Size(307, 598);
+            this.panelSideMenu.Size = new System.Drawing.Size(230, 486);
             this.panelSideMenu.TabIndex = 0;
             // 
             // btnCategorias
@@ -65,11 +67,10 @@
             this.btnCategorias.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnCategorias.IconSize = 30;
             this.btnCategorias.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCategorias.Location = new System.Drawing.Point(0, 295);
-            this.btnCategorias.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCategorias.Location = new System.Drawing.Point(0, 240);
             this.btnCategorias.Name = "btnCategorias";
-            this.btnCategorias.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
-            this.btnCategorias.Size = new System.Drawing.Size(307, 65);
+            this.btnCategorias.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnCategorias.Size = new System.Drawing.Size(230, 53);
             this.btnCategorias.TabIndex = 7;
             this.btnCategorias.Tag = "Categorias";
             this.btnCategorias.Text = "Categorias";
@@ -88,11 +89,10 @@
             this.btnContactos.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnContactos.IconSize = 30;
             this.btnContactos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnContactos.Location = new System.Drawing.Point(0, 230);
-            this.btnContactos.Margin = new System.Windows.Forms.Padding(4);
+            this.btnContactos.Location = new System.Drawing.Point(0, 187);
             this.btnContactos.Name = "btnContactos";
-            this.btnContactos.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
-            this.btnContactos.Size = new System.Drawing.Size(307, 65);
+            this.btnContactos.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnContactos.Size = new System.Drawing.Size(230, 53);
             this.btnContactos.TabIndex = 6;
             this.btnContactos.Tag = "Contactos";
             this.btnContactos.Text = "Contactos";
@@ -112,11 +112,10 @@
             this.btnPaginaPrincipal.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnPaginaPrincipal.IconSize = 30;
             this.btnPaginaPrincipal.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPaginaPrincipal.Location = new System.Drawing.Point(0, 165);
-            this.btnPaginaPrincipal.Margin = new System.Windows.Forms.Padding(4);
+            this.btnPaginaPrincipal.Location = new System.Drawing.Point(0, 134);
             this.btnPaginaPrincipal.Name = "btnPaginaPrincipal";
-            this.btnPaginaPrincipal.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
-            this.btnPaginaPrincipal.Size = new System.Drawing.Size(307, 65);
+            this.btnPaginaPrincipal.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnPaginaPrincipal.Size = new System.Drawing.Size(230, 53);
             this.btnPaginaPrincipal.TabIndex = 5;
             this.btnPaginaPrincipal.Tag = "Pagina Principal";
             this.btnPaginaPrincipal.Text = "Pagina Principal";
@@ -125,18 +124,31 @@
             // 
             // panePhoto
             // 
+            this.panePhoto.Controls.Add(this.pbLogo);
             this.panePhoto.Controls.Add(this.btnMenu);
             this.panePhoto.Dock = System.Windows.Forms.DockStyle.Top;
             this.panePhoto.Location = new System.Drawing.Point(0, 0);
-            this.panePhoto.Margin = new System.Windows.Forms.Padding(4);
             this.panePhoto.Name = "panePhoto";
-            this.panePhoto.Size = new System.Drawing.Size(307, 165);
+            this.panePhoto.Size = new System.Drawing.Size(230, 134);
             this.panePhoto.TabIndex = 0;
+            // 
+            // pbLogo
+            // 
+            this.pbLogo.BackColor = System.Drawing.Color.Transparent;
+            this.pbLogo.Image = ((System.Drawing.Image)(resources.GetObject("pbLogo.Image")));
+            this.pbLogo.Location = new System.Drawing.Point(56, 0);
+            this.pbLogo.Name = "pbLogo";
+            this.pbLogo.Size = new System.Drawing.Size(133, 110);
+            this.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbLogo.TabIndex = 3;
+            this.pbLogo.TabStop = false;
             // 
             // btnMenu
             // 
             this.btnMenu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnMenu.FlatAppearance.BorderSize = 0;
+            this.btnMenu.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Highlight;
+            this.btnMenu.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Highlight;
             this.btnMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMenu.Font = new System.Drawing.Font("Montserrat Medium", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMenu.ForeColor = System.Drawing.SystemColors.ControlLightLight;
@@ -146,39 +158,36 @@
             this.btnMenu.IconSize = 30;
             this.btnMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMenu.Location = new System.Drawing.Point(0, 0);
-            this.btnMenu.Margin = new System.Windows.Forms.Padding(4);
             this.btnMenu.Name = "btnMenu";
-            this.btnMenu.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
-            this.btnMenu.Size = new System.Drawing.Size(307, 165);
+            this.btnMenu.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnMenu.Size = new System.Drawing.Size(230, 134);
             this.btnMenu.TabIndex = 2;
             this.btnMenu.Tag = "Menu";
-            this.btnMenu.Text = "Menu";
             this.btnMenu.UseVisualStyleBackColor = true;
             this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
             // 
             // panelFormHijo
             // 
             this.panelFormHijo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelFormHijo.Location = new System.Drawing.Point(307, 0);
-            this.panelFormHijo.Margin = new System.Windows.Forms.Padding(4);
+            this.panelFormHijo.Location = new System.Drawing.Point(230, 0);
             this.panelFormHijo.Name = "panelFormHijo";
-            this.panelFormHijo.Size = new System.Drawing.Size(820, 598);
+            this.panelFormHijo.Size = new System.Drawing.Size(615, 486);
             this.panelFormHijo.TabIndex = 1;
             // 
             // MenuPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(1127, 598);
+            this.ClientSize = new System.Drawing.Size(845, 486);
             this.Controls.Add(this.panelFormHijo);
             this.Controls.Add(this.panelSideMenu);
             this.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MenuPrincipal";
             this.Text = "Agenda de Contactos";
             this.panelSideMenu.ResumeLayout(false);
             this.panePhoto.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -192,6 +201,7 @@
         private FontAwesome.Sharp.IconButton btnContactos;
         private FontAwesome.Sharp.IconButton btnPaginaPrincipal;
         private System.Windows.Forms.Panel panelFormHijo;
+        private System.Windows.Forms.PictureBox pbLogo;
     }
 }
 
