@@ -74,6 +74,7 @@
             this.btnCategorias.Tag = "Categorias";
             this.btnCategorias.Text = "Categorias";
             this.btnCategorias.UseVisualStyleBackColor = true;
+            this.btnCategorias.Click += new System.EventHandler(this.btnCategorias_Click);
             // 
             // btnContactos
             // 
@@ -96,6 +97,7 @@
             this.btnContactos.Tag = "Contactos";
             this.btnContactos.Text = "Contactos";
             this.btnContactos.UseVisualStyleBackColor = true;
+            this.btnContactos.Click += new System.EventHandler(this.btnContactos_Click);
             // 
             // btnPaginaPrincipal
             // 

@@ -16,7 +16,7 @@ namespace AgendaContactos
         {
             InitializeComponent();
             abrirSubFormulario(new VisualizarContactos()); // cada vez que la aplicacion este abierta este forms estara abierto por default
-            MinimizarMenu();
+            MinimizarMenu(); //el menu comenzara minimizado
         }
 
         private void MinimizarMenu() //metodo para minimizar la barra de menu
@@ -77,6 +77,16 @@ namespace AgendaContactos
         private void btnPaginaPrincipal_Click(object sender, EventArgs e)
         {
             abrirSubFormulario(new VisualizarContactos());
+        }
+
+        private void btnContactos_Click(object sender, EventArgs e)
+        {
+            abrirSubFormulario(new AgregarContacto());
+        }
+
+        private void btnCategorias_Click(object sender, EventArgs e)
+        {
+            abrirSubFormulario(new Categorias());
         }
     }
 }

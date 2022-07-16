@@ -56,6 +56,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AgregarContacto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarContacto.Designer.cs">
+      <DependentUpon>AgregarContacto.cs</DependentUpon>
+    </Compile>
     <Compile Include="Categorias.cs">
       <SubType>Form</SubType>
     </Compile>
