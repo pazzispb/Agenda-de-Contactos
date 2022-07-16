@@ -58,7 +58,7 @@
             this.gbDatos.Font = new System.Drawing.Font("Montserrat", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbDatos.Location = new System.Drawing.Point(28, 67);
             this.gbDatos.Name = "gbDatos";
-            this.gbDatos.Size = new System.Drawing.Size(537, 146);
+            this.gbDatos.Size = new System.Drawing.Size(560, 148);
             this.gbDatos.TabIndex = 0;
             this.gbDatos.TabStop = false;
             this.gbDatos.Text = "Datos de la categoria";
@@ -69,10 +69,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtDescripcion.Font = new System.Drawing.Font("Montserrat", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescripcion.Location = new System.Drawing.Point(105, 75);
+            this.txtDescripcion.Location = new System.Drawing.Point(124, 75);
             this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(406, 49);
+            this.txtDescripcion.Size = new System.Drawing.Size(410, 51);
             this.txtDescripcion.TabIndex = 4;
             // 
             // label2
@@ -84,7 +84,7 @@
             this.label2.Font = new System.Drawing.Font("Montserrat SemiBold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(17, 77);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(79, 16);
+            this.label2.Size = new System.Drawing.Size(101, 21);
             this.label2.TabIndex = 3;
             this.label2.Text = "Descripción";
             // 
@@ -97,7 +97,7 @@
             this.chkIsVisible.Font = new System.Drawing.Font("Montserrat SemiBold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkIsVisible.Location = new System.Drawing.Point(418, 38);
             this.chkIsVisible.Name = "chkIsVisible";
-            this.chkIsVisible.Size = new System.Drawing.Size(93, 20);
+            this.chkIsVisible.Size = new System.Drawing.Size(119, 25);
             this.chkIsVisible.TabIndex = 2;
             this.chkIsVisible.Text = "¿Es visible?";
             this.chkIsVisible.UseVisualStyleBackColor = true;
@@ -109,7 +109,7 @@
             this.txtNombre.Font = new System.Drawing.Font("Montserrat", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombre.Location = new System.Drawing.Point(105, 36);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(280, 22);
+            this.txtNombre.Size = new System.Drawing.Size(280, 26);
             this.txtNombre.TabIndex = 1;
             // 
             // label1
@@ -121,7 +121,7 @@
             this.label1.Font = new System.Drawing.Font("Montserrat SemiBold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(17, 37);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(58, 16);
+            this.label1.Size = new System.Drawing.Size(73, 21);
             this.label1.TabIndex = 0;
             this.label1.Text = "Nombre";
             // 
@@ -188,7 +188,7 @@
             this.label3.Font = new System.Drawing.Font("Montserrat SemiBold", 12F, System.Drawing.FontStyle.Bold);
             this.label3.Location = new System.Drawing.Point(216, 28);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(187, 22);
+            this.label3.Size = new System.Drawing.Size(233, 27);
             this.label3.TabIndex = 5;
             this.label3.Text = "Manejo de categorias";
             // 
@@ -210,7 +210,7 @@
             // 
             // Categorias
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(615, 486);
@@ -218,7 +218,6 @@
             this.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "Categorias";
             this.Text = "Categorias";
-            this.Load += new System.EventHandler(this.Categorias_Load);
             this.SizeChanged += new System.EventHandler(this.Categorias_SizeChanged);
             this.gbDatos.ResumeLayout(false);
             this.gbDatos.PerformLayout();

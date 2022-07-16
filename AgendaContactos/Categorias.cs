@@ -144,9 +144,5 @@ namespace AgendaContactos
             //ConfigurarFormulario();
         }
 
-        private void Categorias_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }
