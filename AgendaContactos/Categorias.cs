@@ -72,7 +72,7 @@ namespace AgendaContactos
             {
                 listadoCategorias[listadoCategorias.IndexOf(this.categoria)].Nombre = categoria.Nombre;
                 listadoCategorias[listadoCategorias.IndexOf(this.categoria)].Descripcion = categoria.Descripcion;
-                listadoCategorias[listadoCategorias.IndexOf(this.categoria)].isVisible = chkIsVisible.Checked;
+                listadoCategorias[listadoCategorias.IndexOf(this.categoria)].isVisible = categoria.isVisible;
             }
             json.GuardarCategorias(listadoCategorias);
             SetEstadoInicial();
