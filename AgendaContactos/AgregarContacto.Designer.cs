@@ -30,10 +30,20 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AgregarContacto));
             this.gbDatosPersonales = new System.Windows.Forms.GroupBox();
+            this.checkBoxIsFavorito = new System.Windows.Forms.CheckBox();
+            this.checkBoxIsEmergencia = new System.Windows.Forms.CheckBox();
+            this.txtBoxCorreoElectronico = new System.Windows.Forms.TextBox();
+            this.maskedTxtBoxTelefonoResidencial = new System.Windows.Forms.MaskedTextBox();
+            this.maskedTxtBoxTelefonoTrabajo = new System.Windows.Forms.MaskedTextBox();
+            this.maskedTxtBoxTelefonoPersonal = new System.Windows.Forms.MaskedTextBox();
+            this.txtBoxApodo = new System.Windows.Forms.TextBox();
+            this.lblApodo = new System.Windows.Forms.Label();
+            this.txtBoxDescripcion = new System.Windows.Forms.TextBox();
             this.dtpNacimiento = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.lblCorreoElectronico = new System.Windows.Forms.Label();
             this.cbCategoria = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.lblDescripcion = new System.Windows.Forms.Label();
             this.lblTelefonoPersonal = new System.Windows.Forms.Label();
             this.lblCategoria = new System.Windows.Forms.Label();
@@ -46,16 +56,6 @@
             this.bttnCrear = new System.Windows.Forms.Button();
             this.bttnSubirFoto = new System.Windows.Forms.Button();
             this.pbFoto = new System.Windows.Forms.PictureBox();
-            this.txtBoxDescripcion = new System.Windows.Forms.TextBox();
-            this.txtBoxApodo = new System.Windows.Forms.TextBox();
-            this.lblApodo = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.maskedTxtBoxTelefonoPersonal = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTxtBoxTelefonoTrabajo = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTxtBoxTelefonoResidencial = new System.Windows.Forms.MaskedTextBox();
-            this.txtBoxCorreoElectronico = new System.Windows.Forms.TextBox();
-            this.checkBoxIsEmergencia = new System.Windows.Forms.CheckBox();
-            this.checkBoxIsFavorito = new System.Windows.Forms.CheckBox();
             this.lblAgregarContacto = new System.Windows.Forms.Label();
             this.gbDatosPersonales.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).BeginInit();
@@ -96,6 +96,119 @@
             this.gbDatosPersonales.TabIndex = 5;
             this.gbDatosPersonales.TabStop = false;
             this.gbDatosPersonales.Text = "Datos Personales";
+            // 
+            // checkBoxIsFavorito
+            // 
+            this.checkBoxIsFavorito.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.checkBoxIsFavorito.AutoSize = true;
+            this.checkBoxIsFavorito.Location = new System.Drawing.Point(16, 315);
+            this.checkBoxIsFavorito.Name = "checkBoxIsFavorito";
+            this.checkBoxIsFavorito.Size = new System.Drawing.Size(125, 19);
+            this.checkBoxIsFavorito.TabIndex = 42;
+            this.checkBoxIsFavorito.Text = "Contacto favorito";
+            this.checkBoxIsFavorito.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxIsEmergencia
+            // 
+            this.checkBoxIsEmergencia.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.checkBoxIsEmergencia.AutoSize = true;
+            this.checkBoxIsEmergencia.Location = new System.Drawing.Point(149, 315);
+            this.checkBoxIsEmergencia.Name = "checkBoxIsEmergencia";
+            this.checkBoxIsEmergencia.Size = new System.Drawing.Size(168, 19);
+            this.checkBoxIsEmergencia.TabIndex = 41;
+            this.checkBoxIsEmergencia.Text = "Contacto de emergencia";
+            this.checkBoxIsEmergencia.UseVisualStyleBackColor = true;
+            // 
+            // txtBoxCorreoElectronico
+            // 
+            this.txtBoxCorreoElectronico.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtBoxCorreoElectronico.BackColor = System.Drawing.SystemColors.Menu;
+            this.txtBoxCorreoElectronico.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtBoxCorreoElectronico.Location = new System.Drawing.Point(150, 232);
+            this.txtBoxCorreoElectronico.Name = "txtBoxCorreoElectronico";
+            this.txtBoxCorreoElectronico.Size = new System.Drawing.Size(251, 14);
+            this.txtBoxCorreoElectronico.TabIndex = 40;
+            // 
+            // maskedTxtBoxTelefonoResidencial
+            // 
+            this.maskedTxtBoxTelefonoResidencial.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.maskedTxtBoxTelefonoResidencial.BackColor = System.Drawing.SystemColors.Menu;
+            this.maskedTxtBoxTelefonoResidencial.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.maskedTxtBoxTelefonoResidencial.Location = new System.Drawing.Point(150, 147);
+            this.maskedTxtBoxTelefonoResidencial.Mask = "(999) 000-0000";
+            this.maskedTxtBoxTelefonoResidencial.Name = "maskedTxtBoxTelefonoResidencial";
+            this.maskedTxtBoxTelefonoResidencial.Size = new System.Drawing.Size(251, 14);
+            this.maskedTxtBoxTelefonoResidencial.TabIndex = 39;
+            // 
+            // maskedTxtBoxTelefonoTrabajo
+            // 
+            this.maskedTxtBoxTelefonoTrabajo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.maskedTxtBoxTelefonoTrabajo.BackColor = System.Drawing.SystemColors.Menu;
+            this.maskedTxtBoxTelefonoTrabajo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.maskedTxtBoxTelefonoTrabajo.Location = new System.Drawing.Point(150, 119);
+            this.maskedTxtBoxTelefonoTrabajo.Mask = "(999) 000-0000";
+            this.maskedTxtBoxTelefonoTrabajo.Name = "maskedTxtBoxTelefonoTrabajo";
+            this.maskedTxtBoxTelefonoTrabajo.Size = new System.Drawing.Size(251, 14);
+            this.maskedTxtBoxTelefonoTrabajo.TabIndex = 38;
+            // 
+            // maskedTxtBoxTelefonoPersonal
+            // 
+            this.maskedTxtBoxTelefonoPersonal.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.maskedTxtBoxTelefonoPersonal.BackColor = System.Drawing.SystemColors.Menu;
+            this.maskedTxtBoxTelefonoPersonal.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.maskedTxtBoxTelefonoPersonal.Location = new System.Drawing.Point(148, 89);
+            this.maskedTxtBoxTelefonoPersonal.Mask = "(999) 000-0000";
+            this.maskedTxtBoxTelefonoPersonal.Name = "maskedTxtBoxTelefonoPersonal";
+            this.maskedTxtBoxTelefonoPersonal.Size = new System.Drawing.Size(251, 14);
+            this.maskedTxtBoxTelefonoPersonal.TabIndex = 37;
+            // 
+            // txtBoxApodo
+            // 
+            this.txtBoxApodo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtBoxApodo.BackColor = System.Drawing.SystemColors.Menu;
+            this.txtBoxApodo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtBoxApodo.Location = new System.Drawing.Point(148, 286);
+            this.txtBoxApodo.Name = "txtBoxApodo";
+            this.txtBoxApodo.Size = new System.Drawing.Size(251, 14);
+            this.txtBoxApodo.TabIndex = 27;
+            // 
+            // lblApodo
+            // 
+            this.lblApodo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblApodo.AutoSize = true;
+            this.lblApodo.Location = new System.Drawing.Point(16, 288);
+            this.lblApodo.Name = "lblApodo";
+            this.lblApodo.Size = new System.Drawing.Size(45, 15);
+            this.lblApodo.TabIndex = 26;
+            this.lblApodo.Text = "Apodo";
+            // 
+            // txtBoxDescripcion
+            // 
+            this.txtBoxDescripcion.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtBoxDescripcion.BackColor = System.Drawing.SystemColors.Menu;
+            this.txtBoxDescripcion.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtBoxDescripcion.Location = new System.Drawing.Point(148, 259);
+            this.txtBoxDescripcion.Name = "txtBoxDescripcion";
+            this.txtBoxDescripcion.Size = new System.Drawing.Size(251, 14);
+            this.txtBoxDescripcion.TabIndex = 24;
             // 
             // dtpNacimiento
             // 
@@ -142,6 +255,18 @@
             this.cbCategoria.Name = "cbCategoria";
             this.cbCategoria.Size = new System.Drawing.Size(251, 23);
             this.cbCategoria.TabIndex = 20;
+            // 
+            // label3
+            // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(13, 124);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(117, 15);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Telefono de Trabajo";
             // 
             // lblDescripcion
             // 
@@ -254,6 +379,7 @@
             this.bttnCancelar.TabIndex = 34;
             this.bttnCancelar.Text = "Cancelar";
             this.bttnCancelar.UseVisualStyleBackColor = false;
+            this.bttnCancelar.Click += new System.EventHandler(this.bttnCancelar_Click);
             // 
             // bttnCrear
             // 
@@ -271,6 +397,7 @@
             this.bttnCrear.TabIndex = 31;
             this.bttnCrear.Text = "Agregar";
             this.bttnCrear.UseVisualStyleBackColor = false;
+            this.bttnCrear.Click += new System.EventHandler(this.bttnCrear_Click);
             // 
             // bttnSubirFoto
             // 
@@ -297,131 +424,6 @@
             this.pbFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbFoto.TabIndex = 35;
             this.pbFoto.TabStop = false;
-            // 
-            // txtBoxDescripcion
-            // 
-            this.txtBoxDescripcion.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtBoxDescripcion.BackColor = System.Drawing.SystemColors.Menu;
-            this.txtBoxDescripcion.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtBoxDescripcion.Location = new System.Drawing.Point(148, 259);
-            this.txtBoxDescripcion.Name = "txtBoxDescripcion";
-            this.txtBoxDescripcion.Size = new System.Drawing.Size(251, 14);
-            this.txtBoxDescripcion.TabIndex = 24;
-            // 
-            // txtBoxApodo
-            // 
-            this.txtBoxApodo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtBoxApodo.BackColor = System.Drawing.SystemColors.Menu;
-            this.txtBoxApodo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtBoxApodo.Location = new System.Drawing.Point(148, 286);
-            this.txtBoxApodo.Name = "txtBoxApodo";
-            this.txtBoxApodo.Size = new System.Drawing.Size(251, 14);
-            this.txtBoxApodo.TabIndex = 27;
-            // 
-            // lblApodo
-            // 
-            this.lblApodo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblApodo.AutoSize = true;
-            this.lblApodo.Location = new System.Drawing.Point(16, 288);
-            this.lblApodo.Name = "lblApodo";
-            this.lblApodo.Size = new System.Drawing.Size(45, 15);
-            this.lblApodo.TabIndex = 26;
-            this.lblApodo.Text = "Apodo";
-            // 
-            // label3
-            // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(13, 124);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(117, 15);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "Telefono de Trabajo";
-            // 
-            // maskedTxtBoxTelefonoPersonal
-            // 
-            this.maskedTxtBoxTelefonoPersonal.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.maskedTxtBoxTelefonoPersonal.BackColor = System.Drawing.SystemColors.Menu;
-            this.maskedTxtBoxTelefonoPersonal.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.maskedTxtBoxTelefonoPersonal.Location = new System.Drawing.Point(148, 89);
-            this.maskedTxtBoxTelefonoPersonal.Mask = "(999) 000-0000";
-            this.maskedTxtBoxTelefonoPersonal.Name = "maskedTxtBoxTelefonoPersonal";
-            this.maskedTxtBoxTelefonoPersonal.Size = new System.Drawing.Size(251, 14);
-            this.maskedTxtBoxTelefonoPersonal.TabIndex = 37;
-            // 
-            // maskedTxtBoxTelefonoTrabajo
-            // 
-            this.maskedTxtBoxTelefonoTrabajo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.maskedTxtBoxTelefonoTrabajo.BackColor = System.Drawing.SystemColors.Menu;
-            this.maskedTxtBoxTelefonoTrabajo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.maskedTxtBoxTelefonoTrabajo.Location = new System.Drawing.Point(150, 119);
-            this.maskedTxtBoxTelefonoTrabajo.Mask = "(999) 000-0000";
-            this.maskedTxtBoxTelefonoTrabajo.Name = "maskedTxtBoxTelefonoTrabajo";
-            this.maskedTxtBoxTelefonoTrabajo.Size = new System.Drawing.Size(251, 14);
-            this.maskedTxtBoxTelefonoTrabajo.TabIndex = 38;
-            // 
-            // maskedTxtBoxTelefonoResidencial
-            // 
-            this.maskedTxtBoxTelefonoResidencial.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.maskedTxtBoxTelefonoResidencial.BackColor = System.Drawing.SystemColors.Menu;
-            this.maskedTxtBoxTelefonoResidencial.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.maskedTxtBoxTelefonoResidencial.Location = new System.Drawing.Point(150, 147);
-            this.maskedTxtBoxTelefonoResidencial.Mask = "(999) 000-0000";
-            this.maskedTxtBoxTelefonoResidencial.Name = "maskedTxtBoxTelefonoResidencial";
-            this.maskedTxtBoxTelefonoResidencial.Size = new System.Drawing.Size(251, 14);
-            this.maskedTxtBoxTelefonoResidencial.TabIndex = 39;
-            // 
-            // txtBoxCorreoElectronico
-            // 
-            this.txtBoxCorreoElectronico.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtBoxCorreoElectronico.BackColor = System.Drawing.SystemColors.Menu;
-            this.txtBoxCorreoElectronico.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtBoxCorreoElectronico.Location = new System.Drawing.Point(150, 232);
-            this.txtBoxCorreoElectronico.Name = "txtBoxCorreoElectronico";
-            this.txtBoxCorreoElectronico.Size = new System.Drawing.Size(251, 14);
-            this.txtBoxCorreoElectronico.TabIndex = 40;
-            // 
-            // checkBoxIsEmergencia
-            // 
-            this.checkBoxIsEmergencia.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.checkBoxIsEmergencia.AutoSize = true;
-            this.checkBoxIsEmergencia.Location = new System.Drawing.Point(149, 315);
-            this.checkBoxIsEmergencia.Name = "checkBoxIsEmergencia";
-            this.checkBoxIsEmergencia.Size = new System.Drawing.Size(168, 19);
-            this.checkBoxIsEmergencia.TabIndex = 41;
-            this.checkBoxIsEmergencia.Text = "Contacto de emergencia";
-            this.checkBoxIsEmergencia.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxIsFavorito
-            // 
-            this.checkBoxIsFavorito.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.checkBoxIsFavorito.AutoSize = true;
-            this.checkBoxIsFavorito.Location = new System.Drawing.Point(16, 315);
-            this.checkBoxIsFavorito.Name = "checkBoxIsFavorito";
-            this.checkBoxIsFavorito.Size = new System.Drawing.Size(125, 19);
-            this.checkBoxIsFavorito.TabIndex = 42;
-            this.checkBoxIsFavorito.Text = "Contacto favorito";
-            this.checkBoxIsFavorito.UseVisualStyleBackColor = true;
             // 
             // lblAgregarContacto
             // 
