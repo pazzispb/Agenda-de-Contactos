@@ -20,6 +20,8 @@ namespace AgendaContactos
         public ImportarExportar()
         {
             InitializeComponent();
+            dgvContactos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;//Permite que las columnas se ajuste el ancho de manera automatica
+
         }
 
         private void btnExportar_Click(object sender, EventArgs e)
