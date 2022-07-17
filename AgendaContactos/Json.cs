@@ -30,6 +30,7 @@ namespace AgendaContactos
             if (ObtenerContactos().Count() > 0) return ObtenerContactos().Max(x => x.Id) + 1;
             else return 1;
         }
+        
         public List<Contacto> ObtenerContactos()
         {
             json = LeerJson("contactos");//almacena en una variable el contenido del archivo Json

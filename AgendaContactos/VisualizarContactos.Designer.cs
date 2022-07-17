@@ -48,6 +48,7 @@
             this.dgvContactos.Name = "dgvContactos";
             this.dgvContactos.Size = new System.Drawing.Size(591, 396);
             this.dgvContactos.TabIndex = 0;
+            this.dgvContactos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvContactos_CellClick);
             // 
             // txtBoxFiltro
             // 

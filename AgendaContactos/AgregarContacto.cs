@@ -77,6 +77,7 @@ namespace AgendaContactos
             }
             contacto = new Contacto()
             {
+                Id = json.ObtenerIdSiguiente(),
                 Nombres = txtBoxNombre.Text,
                 Apellidos = txtBoxApellido.Text,
                 Descripcion = txtBoxDescripcion.Text,
@@ -107,6 +108,11 @@ namespace AgendaContactos
         private void cbCategoria_Click(object sender, EventArgs e)
         {
             //cbCategoria.DataSource = 
+        }
+
+        private void AgregarContacto_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
