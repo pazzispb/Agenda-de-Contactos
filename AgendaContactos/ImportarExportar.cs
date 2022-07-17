@@ -171,14 +171,14 @@ namespace AgendaContactos
                         Descripcion = (string)row.Cells["Descripcion"].Value,
                         Apodo = (string)row.Cells["Apodo"].Value
                     };
-                    if(exportar == false)
-                    {
-                        if (!ValidarNombreUnico(contacto.Nombres))
-                        {
-                            MessageBox.Show("De los seleccionados, hay un contacto que ya existe dentro del sistema", "ALERTA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                            return;
-                        }
-                    }
+                    //if(exportar == false)
+                    //{
+                    //    if (!ValidarNombreUnico(contacto.Nombres))
+                    //    {
+                    //        MessageBox.Show("De los seleccionados, hay un contacto que ya existe dentro del sistema", "ALERTA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    //        return;
+                    //    }
+                    //}
                     lista.Add(contacto);
                 }
             }
