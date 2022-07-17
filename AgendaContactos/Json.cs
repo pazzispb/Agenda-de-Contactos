@@ -29,13 +29,13 @@ namespace AgendaContactos
         public List<Contacto> ObtenerContactos()
         {
             json = LeerJson("contactos");//almacena en una variable el contenido del archivo Json
-            if (String.IsNullOrEmpty(json)) return null; //return null si el contenido del archivo esta vacio o es null
+            if (String.IsNullOrEmpty(json)) return new List<Contacto>(); //return null si el contenido del archivo esta vacio o es null
             return JsonConvert.DeserializeObject<List<Contacto>>(json);//retorna en formato de lista el contenido del json
         }
         public List<Categoria> ObtenerCategorias()
         {
             json = LeerJson("categorias");//almacena en una variable el contenido del archivo Json
-            if (String.IsNullOrEmpty(json)) return null; //return null si el contenido del archivo esta vacio o es null
+            if (String.IsNullOrEmpty(json)) return new List<Categoria>(); //return null si el contenido del archivo esta vacio o es null
             return JsonConvert.DeserializeObject<List<Categoria>>(json);//retorna en formato de lista el contenido del json
         }
         public void GuardarContactos(List<Contacto> contactos)

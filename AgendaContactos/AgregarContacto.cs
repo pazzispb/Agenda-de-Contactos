@@ -13,29 +13,28 @@ namespace AgendaContactos
 {
     public partial class AgregarContacto : Form
     {
-        bool adding = true; //true si se va a agregar o false si se va a modificar una categoria
-        Contacto contacto = null; //Categoria a eliminar o actualizar
-        List<Contacto> listadoContacto;
+        Contacto contacto = null; //contacto a crear
+        List<Contacto> listadoContacto = null;
 
         public AgregarContacto()
         {
             InitializeComponent();
+            SetEstadoInicial();
         }
 
         void SetEstadoInicial()
         {
             gbDatosPersonales.Enabled = true;
-            bttnCancelar.Enabled = false;
+            bttnCancelar.Enabled = true;
             contacto = null;
             BorrarCampos();
             CargarContactos();
-            adding = true;
         }
         void BorrarCampos()
         {
             foreach (Control c in gbDatosPersonales.Controls) //bucle que recorre todos los datos del panel | hasta encontrar alguno vacio
             {
-                if (c is TextBox)
+                if (c is TextBox || c is MaskedTextBox)
                 {
                     c.Text = string.Empty;
                 }
@@ -48,31 +47,18 @@ namespace AgendaContactos
         {
             return (String.IsNullOrWhiteSpace(txtBoxNombre.Text));
         }
-        bool ValidarNombreUnico(string nombre)//responde a la pregunta de: hay otras categorias con el nombre que se intenta registrar o modificar
+        bool ValidarNombreUnico(string nombre)//responde a la pregunta de: hay otros contactos con el nombre que se intenta registrar
         {
-            if (adding)//si se esta agregando una categoria nueva
-            {
-                if (listadoContacto == null) return true;
-                var cantidad = listadoContacto.Count(x => x.Nombres == nombre);//cuentas categorias con ese mismo nombre hay en el json
-                return (cantidad < 1);//true si es unico, false si no lo es
-            }
-            else
-            {
-                if (listadoContacto == null) return true;
-                var cantidad = listadoContacto.Count(x => (x.Nombres == nombre) && (x.Nombres != contacto.Nombres));//cuentas categorias con ese mismo nombre hay en el json
-                return (cantidad < 1);//true si es unico, false si no lo es
-            }
+            if (listadoContacto == null) return true;
+            var cantidad = listadoContacto.Count(x => x.Nombres == nombre);//cuentos contactos con ese mismo nombre hay en el json
+            return (cantidad < 1);//true si es unico, false si no lo es           
         }
         void CargarContactos()
         {
             var json = new Json();
-            //dgvCategorias.DataSource = null;
             listadoContacto = json.ObtenerContactos();
             if (listadoContacto == null) listadoContacto = new List<Contacto>();
-            //dgvCategorias.DataSource = listadoCategoria;//carga el listado de categorias al datagrid
         }
-
-
         private void bttnCrear_Click(object sender, EventArgs e)
         {
             var json = new Json();
@@ -87,18 +73,13 @@ namespace AgendaContactos
                 MessageBox.Show("El nombre que introdujo ya existe", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            var contacto = new Contacto()
+            contacto = new Contacto()
             {
                 Nombres = txtBoxNombre.Text,
                 Apellidos = txtBoxApellido.Text,
                 Descripcion = txtBoxDescripcion.Text,
             };
-
-            if (adding)
-            {
-                ///listadoContacto.Add(contacto);
-            }
-
+            listadoContacto.Add(contacto);
             json.GuardarContactos(listadoContacto);
             MessageBox.Show("Cambios guardados con exito", "EXITO", MessageBoxButtons.OK, MessageBoxIcon.Information);
             SetEstadoInicial();
