@@ -22,15 +22,7 @@ namespace AgendaContactos
             InitializeComponent();
             dgvCategorias.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;//Permite que las columnas se ajuste el ancho de manera automatica
             SetEstadoInicial();
-            //ConfigurarFormulario();
         }
-
-        //void ConfigurarFormulario()
-        //{
-            //int x = (this.Width / 2) - (panel.Width / 2);
-            //int y = (this.Height / 2) - (panel.Height / 2);
-            //panel.Location = new Point(x, y);
-        //}
         void SetEstadoInicial()
         {
             gbDatos.Enabled = true;
