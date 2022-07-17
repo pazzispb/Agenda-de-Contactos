@@ -15,7 +15,7 @@ namespace AgendaContactos
     {
         bool adding = true; //true si se va a agregar o false si se va a modificar una categoria
         Contacto contactos = null; //Categoria a eliminar o actualizar
-        List<Contacto> listadoContacto;
+        List<Contacto> listadoContacto = new List<Contacto>();
 
         public AgregarContacto()
         {
@@ -83,6 +83,8 @@ namespace AgendaContactos
             };
             if (adding)
             {
+                listadoContacto = json.ObtenerContactos();
+                if(listadoContacto == null)  listadoContacto = new List<Contacto>();
                 listadoContacto.Add(contactos);
             }
 
