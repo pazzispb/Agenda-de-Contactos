@@ -255,6 +255,8 @@
             this.cbCategoria.Name = "cbCategoria";
             this.cbCategoria.Size = new System.Drawing.Size(251, 23);
             this.cbCategoria.TabIndex = 20;
+            this.cbCategoria.SelectedIndexChanged += new System.EventHandler(this.cbCategoria_SelectedIndexChanged);
+            this.cbCategoria.Click += new System.EventHandler(this.cbCategoria_Click);
             // 
             // label3
             // 

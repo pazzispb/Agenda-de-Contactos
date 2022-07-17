@@ -148,5 +148,10 @@ namespace AgendaContactos
         {
 
         }
+
+        private void dgvCategorias_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

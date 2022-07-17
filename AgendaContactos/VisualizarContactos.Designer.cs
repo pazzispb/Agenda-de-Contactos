@@ -29,25 +29,25 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VisualizarContactos));
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvContactos = new System.Windows.Forms.DataGridView();
             this.txtBoxFiltro = new System.Windows.Forms.TextBox();
             this.bttnBuscar = new FontAwesome.Sharp.IconButton();
             this.pbFoto = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvContactos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dgvContactos
             // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dgvContactos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Menu;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 66);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(591, 396);
-            this.dataGridView1.TabIndex = 0;
+            this.dgvContactos.BackgroundColor = System.Drawing.SystemColors.Menu;
+            this.dgvContactos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvContactos.Location = new System.Drawing.Point(12, 66);
+            this.dgvContactos.Name = "dgvContactos";
+            this.dgvContactos.Size = new System.Drawing.Size(591, 396);
+            this.dgvContactos.TabIndex = 0;
             // 
             // txtBoxFiltro
             // 
@@ -79,6 +79,7 @@
             this.bttnBuscar.Text = "Buscar";
             this.bttnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bttnBuscar.UseVisualStyleBackColor = true;
+            this.bttnBuscar.Click += new System.EventHandler(this.bttnBuscar_Click);
             // 
             // pbFoto
             // 
@@ -101,10 +102,10 @@
             this.Controls.Add(this.pbFoto);
             this.Controls.Add(this.bttnBuscar);
             this.Controls.Add(this.txtBoxFiltro);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvContactos);
             this.Name = "VisualizarContactos";
             this.Text = "VisualizarContactos";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvContactos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -113,7 +114,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvContactos;
         private System.Windows.Forms.TextBox txtBoxFiltro;
         private FontAwesome.Sharp.IconButton bttnBuscar;
         private System.Windows.Forms.PictureBox pbFoto;
