@@ -96,13 +96,7 @@ namespace AgendaContactos
 
             if (adding)
             {
-                listadoContacto.Add(contacto);
-            }
-            else
-            {
-                listadoContacto[listadoContacto.IndexOf(this.contacto)].Nombres = contacto.Nombres;
-                listadoContacto[listadoContacto.IndexOf(this.contacto)].Apellidos = contacto.Apellidos;
-                listadoContacto[listadoContacto.IndexOf(this.contacto)].Descripcion = contacto.Descripcion;
+                listadoContacto.Add(contactos);
             }
 
             json.GuardarContactos(listadoContacto);
