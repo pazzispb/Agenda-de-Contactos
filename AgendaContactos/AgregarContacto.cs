@@ -14,7 +14,7 @@ namespace AgendaContactos
     public partial class AgregarContacto : Form
     {
         bool adding = true; //true si se va a agregar o false si se va a modificar una categoria
-        Contacto contactos = null; //Categoria a eliminar o actualizar
+        Contacto contacto = null; //Categoria a eliminar o actualizar
         List<Contacto> listadoContacto;
 
         public AgregarContacto()
@@ -26,8 +26,9 @@ namespace AgendaContactos
         {
             gbDatosPersonales.Enabled = true;
             bttnCancelar.Enabled = false;
-            contactos = null;
+            contacto = null;
             BorrarCampos();
+            CargarContactos();
             adding = true;
         }
         void BorrarCampos()
@@ -58,10 +59,19 @@ namespace AgendaContactos
             else
             {
                 if (listadoContacto == null) return true;
-                var cantidad = listadoContacto.Count(x => (x.Nombres == nombre) && (x.Nombres != contactos.Nombres));//cuentas categorias con ese mismo nombre hay en el json
+                var cantidad = listadoContacto.Count(x => (x.Nombres == nombre) && (x.Nombres != contacto.Nombres));//cuentas categorias con ese mismo nombre hay en el json
                 return (cantidad < 1);//true si es unico, false si no lo es
             }
         }
+        void CargarContactos()
+        {
+            var json = new Json();
+            //dgvCategorias.DataSource = null;
+            listadoContacto = json.ObtenerContactos();
+            if (listadoContacto == null) listadoContacto = new List<Contacto>();
+            //dgvCategorias.DataSource = listadoCategoria;//carga el listado de categorias al datagrid
+        }
+
 
         private void bttnCrear_Click(object sender, EventArgs e)
         {
@@ -71,27 +81,34 @@ namespace AgendaContactos
                 MessageBox.Show("Rellene los campos vacios", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+
             if (!ValidarNombreUnico(txtBoxNombre.Text)) //si no es unico
             {
                 MessageBox.Show("El nombre que introdujo ya existe", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            var contactos = new Contacto()
+            var contacto = new Contacto()
             {
                 Nombres = txtBoxNombre.Text,
+                Apellidos = txtBoxApellido.Text,
                 Descripcion = txtBoxDescripcion.Text,
             };
+
             if (adding)
             {
-                listadoContacto.Add(contactos);
+                listadoContacto.Add(contacto);
+            }
+            else
+            {
+                listadoContacto[listadoContacto.IndexOf(this.contacto)].Nombres = contacto.Nombres;
+                listadoContacto[listadoContacto.IndexOf(this.contacto)].Apellidos = contacto.Apellidos;
+                listadoContacto[listadoContacto.IndexOf(this.contacto)].Descripcion = contacto.Descripcion;
             }
 
             json.GuardarContactos(listadoContacto);
             MessageBox.Show("Cambios guardados con exito", "EXITO", MessageBoxButtons.OK, MessageBoxIcon.Information);
             SetEstadoInicial();
-
         }
-
         private void bttnCancelar_Click(object sender, EventArgs e)
         {
             SetEstadoInicial();
