@@ -372,7 +372,7 @@
             this.bttnCancelar.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Highlight;
             this.bttnCancelar.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Highlight;
             this.bttnCancelar.Font = new System.Drawing.Font("Montserrat", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bttnCancelar.ForeColor = System.Drawing.Color.Black;
+            this.bttnCancelar.ForeColor = System.Drawing.SystemColors.Highlight;
             this.bttnCancelar.Location = new System.Drawing.Point(8, 435);
             this.bttnCancelar.Name = "bttnCancelar";
             this.bttnCancelar.Size = new System.Drawing.Size(204, 34);
@@ -390,7 +390,7 @@
             this.bttnCrear.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Highlight;
             this.bttnCrear.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Highlight;
             this.bttnCrear.Font = new System.Drawing.Font("Montserrat", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bttnCrear.ForeColor = System.Drawing.Color.Black;
+            this.bttnCrear.ForeColor = System.Drawing.SystemColors.Highlight;
             this.bttnCrear.Location = new System.Drawing.Point(218, 435);
             this.bttnCrear.Name = "bttnCrear";
             this.bttnCrear.Size = new System.Drawing.Size(206, 34);

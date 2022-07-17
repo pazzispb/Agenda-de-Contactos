@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuPrincipal));
             this.panelSideMenu = new System.Windows.Forms.Panel();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.btnCategorias = new FontAwesome.Sharp.IconButton();
             this.btnContactos = new FontAwesome.Sharp.IconButton();
             this.btnPaginaPrincipal = new FontAwesome.Sharp.IconButton();
@@ -45,6 +46,7 @@
             // panelSideMenu
             // 
             this.panelSideMenu.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panelSideMenu.Controls.Add(this.iconButton1);
             this.panelSideMenu.Controls.Add(this.btnCategorias);
             this.panelSideMenu.Controls.Add(this.btnContactos);
             this.panelSideMenu.Controls.Add(this.btnPaginaPrincipal);
@@ -54,6 +56,28 @@
             this.panelSideMenu.Name = "panelSideMenu";
             this.panelSideMenu.Size = new System.Drawing.Size(230, 486);
             this.panelSideMenu.TabIndex = 0;
+            // 
+            // iconButton1
+            // 
+            this.iconButton1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.iconButton1.FlatAppearance.BorderSize = 0;
+            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton1.Font = new System.Drawing.Font("Montserrat Medium", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.Archive;
+            this.iconButton1.IconColor = System.Drawing.Color.White;
+            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton1.IconSize = 30;
+            this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton1.Location = new System.Drawing.Point(0, 293);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.iconButton1.Size = new System.Drawing.Size(230, 53);
+            this.iconButton1.TabIndex = 8;
+            this.iconButton1.Tag = "Exportar/Importar";
+            this.iconButton1.Text = "Importar/Exportar";
+            this.iconButton1.UseVisualStyleBackColor = true;
+            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
             // 
             // btnCategorias
             // 
@@ -179,10 +203,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(845, 486);
             this.Controls.Add(this.panelFormHijo);
             this.Controls.Add(this.panelSideMenu);
             this.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "MenuPrincipal";
             this.Text = "Agenda de Contactos";
             this.panelSideMenu.ResumeLayout(false);
@@ -202,6 +228,7 @@
         private FontAwesome.Sharp.IconButton btnPaginaPrincipal;
         private System.Windows.Forms.Panel panelFormHijo;
         private System.Windows.Forms.PictureBox pbLogo;
+        private FontAwesome.Sharp.IconButton iconButton1;
     }
 }
 

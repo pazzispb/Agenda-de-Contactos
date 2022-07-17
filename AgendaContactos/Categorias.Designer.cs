@@ -68,8 +68,10 @@
             this.txtDescripcion.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtDescripcion.BackColor = System.Drawing.SystemColors.Menu;
+            this.txtDescripcion.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtDescripcion.Font = new System.Drawing.Font("Montserrat", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescripcion.Location = new System.Drawing.Point(124, 75);
+            this.txtDescripcion.Location = new System.Drawing.Point(105, 77);
             this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(406, 49);
@@ -106,6 +108,8 @@
             // 
             this.txtNombre.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
+            this.txtNombre.BackColor = System.Drawing.SystemColors.Menu;
+            this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNombre.Font = new System.Drawing.Font("Montserrat", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombre.Location = new System.Drawing.Point(105, 36);
             this.txtNombre.Name = "txtNombre";
@@ -132,19 +136,23 @@
             this.dgvCategorias.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvCategorias.BackgroundColor = System.Drawing.SystemColors.Menu;
             this.dgvCategorias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCategorias.Location = new System.Drawing.Point(28, 270);
             this.dgvCategorias.Name = "dgvCategorias";
             this.dgvCategorias.ReadOnly = true;
             this.dgvCategorias.RowHeadersWidth = 51;
             this.dgvCategorias.RowTemplate.Height = 24;
-            this.dgvCategorias.Size = new System.Drawing.Size(537, 175);
+            this.dgvCategorias.Size = new System.Drawing.Size(544, 175);
             this.dgvCategorias.TabIndex = 1;
             this.dgvCategorias.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCategorias_CellClick);
             // 
             // btnGuardar
             // 
+            this.btnGuardar.FlatAppearance.CheckedBackColor = System.Drawing.SystemColors.Highlight;
+            this.btnGuardar.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Highlight;
             this.btnGuardar.Font = new System.Drawing.Font("Montserrat", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardar.ForeColor = System.Drawing.SystemColors.Highlight;
             this.btnGuardar.Location = new System.Drawing.Point(28, 218);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(159, 41);
@@ -158,7 +166,11 @@
             this.btnBorrar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnBorrar.Enabled = false;
+            this.btnBorrar.FlatAppearance.CheckedBackColor = System.Drawing.SystemColors.Highlight;
+            this.btnBorrar.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Highlight;
+            this.btnBorrar.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Highlight;
             this.btnBorrar.Font = new System.Drawing.Font("Montserrat", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBorrar.ForeColor = System.Drawing.SystemColors.Highlight;
             this.btnBorrar.Location = new System.Drawing.Point(192, 218);
             this.btnBorrar.Name = "btnBorrar";
             this.btnBorrar.Size = new System.Drawing.Size(199, 41);
@@ -170,10 +182,13 @@
             // btnCancelar
             // 
             this.btnCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCancelar.FlatAppearance.CheckedBackColor = System.Drawing.SystemColors.Highlight;
+            this.btnCancelar.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Highlight;
             this.btnCancelar.Font = new System.Drawing.Font("Montserrat", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.ForeColor = System.Drawing.SystemColors.Highlight;
             this.btnCancelar.Location = new System.Drawing.Point(397, 218);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(168, 41);
+            this.btnCancelar.Size = new System.Drawing.Size(175, 41);
             this.btnCancelar.TabIndex = 4;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
@@ -182,10 +197,10 @@
             // label3
             // 
             this.label3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label3.Font = new System.Drawing.Font("Montserrat SemiBold", 12F, System.Drawing.FontStyle.Bold);
+            this.label3.Font = new System.Drawing.Font("Montserrat SemiBold", 22F, System.Drawing.FontStyle.Bold);
             this.label3.Location = new System.Drawing.Point(0, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(591, 27);
+            this.label3.Size = new System.Drawing.Size(591, 56);
             this.label3.TabIndex = 5;
             this.label3.Text = "Manejo de categorias";
             this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;

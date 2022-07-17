@@ -96,7 +96,7 @@ namespace AgendaContactos
 
             if (adding)
             {
-                listadoContacto.Add(contactos);
+                ///listadoContacto.Add(contacto);
             }
 
             json.GuardarContactos(listadoContacto);
