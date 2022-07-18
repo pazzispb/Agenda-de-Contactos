@@ -23,11 +23,12 @@ namespace AgendaContactos.Modelos
         public bool isEmergencia { get; set; } = false;
         public bool isFavorito { get; set; } = false;
     }
-    public class ContactoExportado : Contacto
+    public class ContactoExportado : Contacto //Clase para poder seleccionar contactos en el formulario de exportar e importar
     {
         public bool Seleccion { get; set; }
     }
-    public class VistaContacto{
+    public class VistaContacto //Clase para mostrar contactos en el formulario VisualizarContactos
+    {
 
         public int? Id { get; set; }
         public string Nombre { get; set; }
