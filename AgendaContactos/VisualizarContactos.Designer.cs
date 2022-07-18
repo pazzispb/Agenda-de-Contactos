@@ -106,6 +106,7 @@
             this.Controls.Add(this.dgvContactos);
             this.Name = "VisualizarContactos";
             this.Text = "VisualizarContactos";
+            this.Load += new System.EventHandler(this.VisualizarContactos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvContactos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).EndInit();
             this.ResumeLayout(false);

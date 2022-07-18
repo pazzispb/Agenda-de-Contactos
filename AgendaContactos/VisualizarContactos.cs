@@ -26,19 +26,36 @@ namespace AgendaContactos
 
         }
 
-        void CargarContactos()
+        void CargarContactos(string busqueda = null)
         {
             var json = new Json();
             listadoContacto = json.ObtenerContactos();//Cargamos todos los contactos
             var listadoProyectado = listadoContacto
-                .Select(x => new {
+                .Select(x => new VistaContacto(){
                     Id = x.Id,
-                    Nombre = x.Nombres+" "+x.Apellidos, 
-                    TelefonoPersonal =x.TelefonoPersonal,
+                    Nombre = x.Nombres + " " + x.Apellidos,
+                    TelefonoPersonal = x.TelefonoPersonal,
                     TelefonoTrabajo = x.TelefonoTrabajo,
                     TelefonoResidencial = x.TelefonoResidencial
                 }).ToList();//Elegimos 4 campos a mostrar dentro del datagrid
-            if (listadoProyectado == null) listadoContacto = new List<Contacto>();
+            if(!string.IsNullOrWhiteSpace(busqueda))
+            {
+                foreach(var contacto in listadoProyectado)
+                {
+                    var indice = listadoProyectado.IndexOf(contacto);
+                    if (contacto.Nombre == null) listadoProyectado[indice].Nombre = "";
+                    if (contacto.TelefonoPersonal == null) listadoProyectado[indice].TelefonoPersonal = "";
+                    if (contacto.TelefonoResidencial == null) listadoProyectado[indice].TelefonoResidencial = "";
+                    if (contacto.TelefonoTrabajo == null) listadoProyectado[indice].TelefonoTrabajo = "";
+                }
+                listadoProyectado = listadoProyectado.FindAll(
+                    x =>
+                        (x.Nombre.ToLower().Trim().Contains(busqueda.ToLower().Trim())) ||
+                        (x.TelefonoTrabajo.ToLower().Trim().Contains(busqueda.ToLower().Trim())) ||
+                        (x.TelefonoResidencial.ToLower().Trim().Contains(busqueda.ToLower().Trim())) ||
+                        (x.TelefonoPersonal.ToLower().Trim().Contains(busqueda.ToLower().Trim()))
+                    );
+            }
             dgvContactos.DataSource = null;
             dgvContactos.DataSource = listadoProyectado; // mi dgv sera igual a mi listado de conceptos
             dgvContactos.Columns["Id"].Visible = false;//Esconde la columna de Id
@@ -46,11 +63,10 @@ namespace AgendaContactos
 
         private void bttnBuscar_Click(object sender, EventArgs e)
         {
-            //dgvContactos.DataSource = listadoContacto; //el datagridview obtiene la lista de ciudadanos
-            //var nombre = dgvContactos.CurrentRow.Cells["Nombre"].Value.ToString(); //almacena el nombre de la categoria
-            //var contacto = listadoContacto.Filter(x => x.Nombres == nombre); //almacena el objeto categoria
-            //dgvContactos.DataSource = contacto; //el datagridview obtiene la lista de ciudadanos
-
+            if (!string.IsNullOrWhiteSpace(txtBoxFiltro.Text))
+            {
+                CargarContactos(txtBoxFiltro.Text);
+            }
         }
 
         private void dgvContactos_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -60,6 +76,11 @@ namespace AgendaContactos
                 var id = Convert.ToInt32(dgvContactos.CurrentRow.Cells["Id"].Value);
                 Program.aplicacion.abrirSubFormulario(new InformacionContacto(id));
             }
+        }
+
+        private void VisualizarContactos_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

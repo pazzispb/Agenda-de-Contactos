@@ -146,7 +146,6 @@
             this.dgvCategorias.Size = new System.Drawing.Size(544, 175);
             this.dgvCategorias.TabIndex = 1;
             this.dgvCategorias.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCategorias_CellClick);
-            this.dgvCategorias.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCategorias_CellContentClick);
             // 
             // btnGuardar
             // 
@@ -232,7 +231,6 @@
             this.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "Categorias";
             this.Text = "Categorias";
-            this.Load += new System.EventHandler(this.Categorias_Load);
             this.SizeChanged += new System.EventHandler(this.Categorias_SizeChanged);
             this.gbDatos.ResumeLayout(false);
             this.gbDatos.PerformLayout();
