@@ -92,7 +92,7 @@
             this.gbDatosPersonales.Font = new System.Drawing.Font("Montserrat SemiBold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbDatosPersonales.Location = new System.Drawing.Point(12, 80);
             this.gbDatosPersonales.Name = "gbDatosPersonales";
-            this.gbDatosPersonales.Size = new System.Drawing.Size(413, 343);
+            this.gbDatosPersonales.Size = new System.Drawing.Size(591, 343);
             this.gbDatosPersonales.TabIndex = 5;
             this.gbDatosPersonales.TabStop = false;
             this.gbDatosPersonales.Text = "Datos Personales";
@@ -116,7 +116,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.checkBoxIsEmergencia.AutoSize = true;
-            this.checkBoxIsEmergencia.Location = new System.Drawing.Point(162, 315);
+            this.checkBoxIsEmergencia.Location = new System.Drawing.Point(401, 315);
             this.checkBoxIsEmergencia.Name = "checkBoxIsEmergencia";
             this.checkBoxIsEmergencia.Size = new System.Drawing.Size(176, 20);
             this.checkBoxIsEmergencia.TabIndex = 41;
@@ -133,7 +133,7 @@
             this.txtBoxCorreoElectronico.Font = new System.Drawing.Font("Montserrat Medium", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxCorreoElectronico.Location = new System.Drawing.Point(162, 236);
             this.txtBoxCorreoElectronico.Name = "txtBoxCorreoElectronico";
-            this.txtBoxCorreoElectronico.Size = new System.Drawing.Size(237, 15);
+            this.txtBoxCorreoElectronico.Size = new System.Drawing.Size(415, 15);
             this.txtBoxCorreoElectronico.TabIndex = 40;
             // 
             // maskedTxtBoxTelefonoResidencial
@@ -149,7 +149,7 @@
             this.maskedTxtBoxTelefonoResidencial.Mask = "(999) 000-0000";
             this.maskedTxtBoxTelefonoResidencial.Name = "maskedTxtBoxTelefonoResidencial";
             this.maskedTxtBoxTelefonoResidencial.PromptChar = ' ';
-            this.maskedTxtBoxTelefonoResidencial.Size = new System.Drawing.Size(237, 15);
+            this.maskedTxtBoxTelefonoResidencial.Size = new System.Drawing.Size(415, 15);
             this.maskedTxtBoxTelefonoResidencial.TabIndex = 39;
             this.maskedTxtBoxTelefonoResidencial.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
@@ -166,7 +166,7 @@
             this.maskedTxtBoxTelefonoTrabajo.Mask = "(999) 000-0000";
             this.maskedTxtBoxTelefonoTrabajo.Name = "maskedTxtBoxTelefonoTrabajo";
             this.maskedTxtBoxTelefonoTrabajo.PromptChar = ' ';
-            this.maskedTxtBoxTelefonoTrabajo.Size = new System.Drawing.Size(237, 15);
+            this.maskedTxtBoxTelefonoTrabajo.Size = new System.Drawing.Size(415, 15);
             this.maskedTxtBoxTelefonoTrabajo.TabIndex = 38;
             this.maskedTxtBoxTelefonoTrabajo.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
@@ -183,7 +183,7 @@
             this.maskedTxtBoxTelefonoPersonal.Mask = "(999) 000-0000";
             this.maskedTxtBoxTelefonoPersonal.Name = "maskedTxtBoxTelefonoPersonal";
             this.maskedTxtBoxTelefonoPersonal.PromptChar = ' ';
-            this.maskedTxtBoxTelefonoPersonal.Size = new System.Drawing.Size(237, 15);
+            this.maskedTxtBoxTelefonoPersonal.Size = new System.Drawing.Size(415, 15);
             this.maskedTxtBoxTelefonoPersonal.TabIndex = 37;
             this.maskedTxtBoxTelefonoPersonal.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
@@ -197,7 +197,7 @@
             this.txtBoxApodo.Font = new System.Drawing.Font("Montserrat Medium", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxApodo.Location = new System.Drawing.Point(162, 287);
             this.txtBoxApodo.Name = "txtBoxApodo";
-            this.txtBoxApodo.Size = new System.Drawing.Size(237, 15);
+            this.txtBoxApodo.Size = new System.Drawing.Size(415, 15);
             this.txtBoxApodo.TabIndex = 27;
             // 
             // lblApodo
@@ -223,7 +223,7 @@
             this.txtBoxDescripcion.Font = new System.Drawing.Font("Montserrat Medium", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxDescripcion.Location = new System.Drawing.Point(162, 262);
             this.txtBoxDescripcion.Name = "txtBoxDescripcion";
-            this.txtBoxDescripcion.Size = new System.Drawing.Size(237, 15);
+            this.txtBoxDescripcion.Size = new System.Drawing.Size(415, 15);
             this.txtBoxDescripcion.TabIndex = 24;
             // 
             // dtpNacimiento
@@ -233,7 +233,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dtpNacimiento.Location = new System.Drawing.Point(163, 206);
             this.dtpNacimiento.Name = "dtpNacimiento";
-            this.dtpNacimiento.Size = new System.Drawing.Size(238, 22);
+            this.dtpNacimiento.Size = new System.Drawing.Size(416, 22);
             this.dtpNacimiento.TabIndex = 23;
             // 
             // label2
@@ -271,7 +271,7 @@
             this.cbCategoria.FormattingEnabled = true;
             this.cbCategoria.Location = new System.Drawing.Point(164, 173);
             this.cbCategoria.Name = "cbCategoria";
-            this.cbCategoria.Size = new System.Drawing.Size(237, 24);
+            this.cbCategoria.Size = new System.Drawing.Size(415, 24);
             this.cbCategoria.TabIndex = 20;
             this.cbCategoria.Click += new System.EventHandler(this.cbCategoria_Click);
             // 
@@ -350,7 +350,7 @@
             this.txtBoxApellido.Font = new System.Drawing.Font("Montserrat Medium", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxApellido.Location = new System.Drawing.Point(162, 61);
             this.txtBoxApellido.Name = "txtBoxApellido";
-            this.txtBoxApellido.Size = new System.Drawing.Size(239, 15);
+            this.txtBoxApellido.Size = new System.Drawing.Size(417, 15);
             this.txtBoxApellido.TabIndex = 8;
             // 
             // lblApellido
@@ -376,7 +376,7 @@
             this.txtBoxNombre.Font = new System.Drawing.Font("Montserrat Medium", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxNombre.Location = new System.Drawing.Point(162, 29);
             this.txtBoxNombre.Name = "txtBoxNombre";
-            this.txtBoxNombre.Size = new System.Drawing.Size(239, 15);
+            this.txtBoxNombre.Size = new System.Drawing.Size(417, 15);
             this.txtBoxNombre.TabIndex = 3;
             // 
             // lblNombre
@@ -403,7 +403,7 @@
             this.bttnCancelar.ForeColor = System.Drawing.SystemColors.Highlight;
             this.bttnCancelar.Location = new System.Drawing.Point(8, 435);
             this.bttnCancelar.Name = "bttnCancelar";
-            this.bttnCancelar.Size = new System.Drawing.Size(204, 34);
+            this.bttnCancelar.Size = new System.Drawing.Size(284, 34);
             this.bttnCancelar.TabIndex = 34;
             this.bttnCancelar.Text = "Cancelar";
             this.bttnCancelar.UseVisualStyleBackColor = false;
@@ -419,9 +419,9 @@
             this.bttnCrear.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Highlight;
             this.bttnCrear.Font = new System.Drawing.Font("Montserrat", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bttnCrear.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.bttnCrear.Location = new System.Drawing.Point(218, 435);
+            this.bttnCrear.Location = new System.Drawing.Point(298, 435);
             this.bttnCrear.Name = "bttnCrear";
-            this.bttnCrear.Size = new System.Drawing.Size(206, 34);
+            this.bttnCrear.Size = new System.Drawing.Size(305, 34);
             this.bttnCrear.TabIndex = 31;
             this.bttnCrear.Text = "Agregar";
             this.bttnCrear.UseVisualStyleBackColor = false;
@@ -433,9 +433,9 @@
             this.bttnSubirFoto.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Highlight;
             this.bttnSubirFoto.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Highlight;
             this.bttnSubirFoto.Font = new System.Drawing.Font("Montserrat", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bttnSubirFoto.Location = new System.Drawing.Point(430, 435);
+            this.bttnSubirFoto.Location = new System.Drawing.Point(439, 32);
             this.bttnSubirFoto.Name = "bttnSubirFoto";
-            this.bttnSubirFoto.Size = new System.Drawing.Size(173, 34);
+            this.bttnSubirFoto.Size = new System.Drawing.Size(84, 24);
             this.bttnSubirFoto.TabIndex = 36;
             this.bttnSubirFoto.Text = "Subir Foto";
             this.bttnSubirFoto.UseVisualStyleBackColor = true;
@@ -447,9 +447,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pbFoto.Image = ((System.Drawing.Image)(resources.GetObject("pbFoto.Image")));
             this.pbFoto.InitialImage = ((System.Drawing.Image)(resources.GetObject("pbFoto.InitialImage")));
-            this.pbFoto.Location = new System.Drawing.Point(430, 88);
+            this.pbFoto.Location = new System.Drawing.Point(529, 12);
             this.pbFoto.Name = "pbFoto";
-            this.pbFoto.Size = new System.Drawing.Size(172, 334);
+            this.pbFoto.Size = new System.Drawing.Size(74, 65);
             this.pbFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbFoto.TabIndex = 35;
             this.pbFoto.TabStop = false;
@@ -459,7 +459,7 @@
             this.lblAgregarContacto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.lblAgregarContacto.AutoSize = true;
             this.lblAgregarContacto.Font = new System.Drawing.Font("Montserrat SemiBold", 24F, System.Drawing.FontStyle.Bold);
-            this.lblAgregarContacto.Location = new System.Drawing.Point(152, 24);
+            this.lblAgregarContacto.Location = new System.Drawing.Point(12, 12);
             this.lblAgregarContacto.Name = "lblAgregarContacto";
             this.lblAgregarContacto.Size = new System.Drawing.Size(312, 44);
             this.lblAgregarContacto.TabIndex = 37;
@@ -478,8 +478,10 @@
             this.Controls.Add(this.bttnCrear);
             this.Controls.Add(this.gbDatosPersonales);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.KeyPreview = true;
             this.Name = "AgregarContacto";
             this.Text = "AgregarContacto";
+            this.Load += new System.EventHandler(this.AgregarContacto_Load);
             this.gbDatosPersonales.ResumeLayout(false);
             this.gbDatosPersonales.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).EndInit();

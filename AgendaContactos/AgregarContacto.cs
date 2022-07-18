@@ -101,7 +101,8 @@ namespace AgendaContactos
                 CorreoElectronico = txtBoxCorreoElectronico.Text,
                 FechaNacimiento = dtpNacimiento.Value,
                 UrlFoto = pbFoto.ImageLocation,
-
+                isEmergencia = checkBoxIsEmergencia.Checked,
+                isFavorito = checkBoxIsFavorito.Checked
             };
 
             listadoContacto.Add(contacto);
@@ -119,7 +120,7 @@ namespace AgendaContactos
             abrirArchivo.Filter = "Image files(*.jpg; *.jpeg; *.gif; *.bmp)|*.jpg; *.jpeg; *.gif; *.bmp"; //filtrando el archivo por los tipos 
             if (abrirArchivo.ShowDialog() == DialogResult.OK)
             {
-                pbFoto.Image = new Bitmap(abrirArchivo.FileName);
+                pbFoto.ImageLocation = abrirArchivo.FileName;
             }
         }
 
@@ -129,6 +130,11 @@ namespace AgendaContactos
             cbCategoria.DataSource = json.ObtenerCategorias().FindAll(x => x.isVisible == true);
             cbCategoria.DisplayMember = "Nombre";
             cbCategoria.ValueMember = "Nombre";
+        }
+
+        private void AgregarContacto_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
