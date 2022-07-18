@@ -33,7 +33,7 @@ namespace AgendaContactos
             txtBoxDescripcion.Text = contacto.Descripcion;
             txtBoxApodo.Text = contacto.Apodo;
             dtpNacimiento.Value = contacto.FechaNacimiento;
-            if (contacto.UrlFoto != null) { pbFoto.Image = Image.FromFile(contacto.UrlFoto); }
+            if (contacto.UrlFoto != null) { pbFoto.ImageLocation = contacto.UrlFoto; }
             checkBoxIsFavorito.Checked = contacto.isFavorito;
             checkBoxIsEmergencia.Checked = contacto.isEmergencia;
             maskedTxtBoxTelefonoPersonal.Text = contacto.TelefonoPersonal;

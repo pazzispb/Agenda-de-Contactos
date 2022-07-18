@@ -460,14 +460,13 @@
             // 
             // bttnEliminar
             // 
-            this.bttnEliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.bttnEliminar.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.bttnEliminar.FlatAppearance.BorderSize = 0;
             this.bttnEliminar.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Highlight;
             this.bttnEliminar.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Highlight;
             this.bttnEliminar.Font = new System.Drawing.Font("Montserrat", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bttnEliminar.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.bttnEliminar.Location = new System.Drawing.Point(16, 487);
+            this.bttnEliminar.Location = new System.Drawing.Point(16, 477);
             this.bttnEliminar.Margin = new System.Windows.Forms.Padding(4);
             this.bttnEliminar.Name = "bttnEliminar";
             this.bttnEliminar.Size = new System.Drawing.Size(408, 50);
@@ -485,7 +484,7 @@
             this.bttnActualizar.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Highlight;
             this.bttnActualizar.Font = new System.Drawing.Font("Montserrat", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bttnActualizar.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.bttnActualizar.Location = new System.Drawing.Point(432, 487);
+            this.bttnActualizar.Location = new System.Drawing.Point(432, 477);
             this.bttnActualizar.Margin = new System.Windows.Forms.Padding(4);
             this.bttnActualizar.Name = "bttnActualizar";
             this.bttnActualizar.Size = new System.Drawing.Size(436, 50);
