@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -66,6 +67,9 @@ namespace AgendaContactos
                 );
             return (cantidad < 1);     
         }
+        static bool IsValidEmail(string email) => EmailFormat.IsMatch(email);
+        static readonly Regex EmailFormat = new Regex(@"^(?("")("".+?(?<!\\)""@)|(([0-9a-z]((\.(?!\.))|[-!#\$%&'\*\+/=\?\^`\{\}\|~\w])*)(?<=[0-9a-z])@))(?(\[)(\[(\d{1,3}\.){3}\d{1,3}\])|(([0-9a-z][-\w]*[0-9a-z]*\.)+[a-z0-9][\-a-z0-9]{0,22}[a-z0-9]))$");
+
         private void bttnActualizar_Click(object sender, EventArgs e)
         {
             if (ValidarCamposObligatorios()) // En caso de campo vacio, mostrara mensaje por pantalla un mensaje de alerta
@@ -78,6 +82,12 @@ namespace AgendaContactos
                 MessageBox.Show("El nombre que introdujo ya existe", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+            if (!IsValidEmail(txtBoxCorreoElectronico.Text))
+            {
+                MessageBox.Show("El correo electronico no es valido", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             var json = new Json();
             var listadoContactos = json.ObtenerContactos();
             Contacto contacto = listadoContactos.FirstOrDefault(x => x.Id == id);
