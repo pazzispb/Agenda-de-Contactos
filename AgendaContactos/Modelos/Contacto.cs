@@ -29,7 +29,6 @@ namespace AgendaContactos.Modelos
     }
     public class VistaContacto //Clase para mostrar contactos en el formulario VisualizarContactos
     {
-
         public int? Id { get; set; }
         public string Nombre { get; set; }
         public string TelefonoPersonal { get; set; }

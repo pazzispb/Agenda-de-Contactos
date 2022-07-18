@@ -35,8 +35,9 @@ namespace AgendaContactos
             txtBoxCorreoElectronico.Text = contacto.CorreoElectronico;
             txtBoxDescripcion.Text = contacto.Descripcion;
             txtBoxApodo.Text = contacto.Apodo;
-            //foto
-
+            pbFoto.ImageLocation = contacto.UrlFoto;
+            checkBoxIsFavorito.Checked = contacto.isFavorito;
+            checkBoxIsEmergencia.Checked = contacto.isEmergencia;
         }
 
 
@@ -44,30 +45,29 @@ namespace AgendaContactos
         {
             return (String.IsNullOrWhiteSpace(txtBoxNombre.Text));
         }
-
         bool ValidarNombreUnico(string nombre)
         {
             var json = new Json();
             if (json.ObtenerContactos() == null) return true;
-            var cantidad = json.ObtenerContactos().Count(x => x.Nombres == nombre);
+            var cantidad = json.ObtenerContactos()
+                .Count(
+                x => ((x.Nombres + " " + x.Apellidos).ToLower().Trim() == nombre.ToLower().Trim()) //si el nombre y el apellido es igual a alguno de los contactos registrados
+                && (x.Id != id) //si no es el id del contacto que se esta visualizando
+                );
             return (cantidad < 1);     
         }
-
         private void bttnActualizar_Click(object sender, EventArgs e)
         {
-
-
             if (ValidarCamposObligatorios()) 
             {
                 MessageBox.Show("Rellene los campos vacios", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            if (!ValidarNombreUnico(txtBoxNombre.Text)) 
+            if (!ValidarNombreUnico(txtBoxNombre.Text + " " + txtBoxApellido.Text)) 
             {
                 MessageBox.Show("El nombre que introdujo ya existe", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-
             var json = new Json();
             var listadoContactos = json.ObtenerContactos();
             Contacto contacto = listadoContactos.FirstOrDefault(x => x.Id == id);
@@ -82,15 +82,9 @@ namespace AgendaContactos
             listadoContactos[index].CorreoElectronico = txtBoxCorreoElectronico.Text;
             listadoContactos[index].Descripcion = txtBoxDescripcion.Text;
             listadoContactos[index].Apodo = txtBoxApodo.Text;
-            if (checkBoxIsFavorito.Checked)
-            {
-                listadoContactos[index].isFavorito = true;
-            }
-            if (checkBoxIsEmergencia.Checked)
-            {
-                listadoContactos[index].isEmergencia = true;
-            }
-
+            listadoContactos[index].isFavorito = checkBoxIsFavorito.Checked;
+            listadoContactos[index].isEmergencia = checkBoxIsEmergencia.Checked;
+            listadoContactos[index].UrlFoto = pbFoto.ImageLocation;
             json.GuardarContactos(listadoContactos);
             MessageBox.Show("Cambios guardados con exito", "EXITO", MessageBoxButtons.OK, MessageBoxIcon.Information);
             Program.aplicacion.abrirSubFormulario(new VisualizarContactos());
@@ -103,6 +97,7 @@ namespace AgendaContactos
             var index = listadoContactos.IndexOf(contacto);
             listadoContactos.Remove(contacto);
             json.GuardarContactos(listadoContactos);
+            MessageBox.Show("Contacto eliminado con exito", "EXITO", MessageBoxButtons.OK, MessageBoxIcon.Information);
             Program.aplicacion.abrirSubFormulario(new VisualizarContactos());
 
         }
