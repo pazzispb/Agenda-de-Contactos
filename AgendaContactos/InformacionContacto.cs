@@ -52,9 +52,8 @@ namespace AgendaContactos
         bool ValidarCamposObligatorios() //confirmara los campos vacios 
         {
             return (String.IsNullOrWhiteSpace(txtBoxNombre.Text)|| String.IsNullOrWhiteSpace(txtBoxApellido.Text)
-                || String.IsNullOrWhiteSpace(maskedTxtBoxTelefonoPersonal.Text) || String.IsNullOrWhiteSpace(maskedTxtBoxTelefonoResidencial.Text)
-                || String.IsNullOrWhiteSpace(maskedTxtBoxTelefonoTrabajo.Text)
-                );
+                || (String.IsNullOrWhiteSpace(maskedTxtBoxTelefonoPersonal.Text) && String.IsNullOrWhiteSpace(maskedTxtBoxTelefonoResidencial.Text)
+                && String.IsNullOrWhiteSpace(maskedTxtBoxTelefonoTrabajo.Text)));
         }
 
         bool ValidarNombreUnico(string nombre)  //confirmara que no exista otra persona igual en la lista de contacto
