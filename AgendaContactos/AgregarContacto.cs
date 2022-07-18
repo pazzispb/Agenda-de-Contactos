@@ -15,6 +15,8 @@ namespace AgendaContactos
     {
         Contacto contacto = null; //contacto a crear
         List<Contacto> listadoContacto = null;
+        Categoria categoria = null; //Categoria a eliminar o actualizar
+        List<Categoria> listadoCategoria;
 
         public AgregarContacto()
         {
@@ -40,7 +42,7 @@ namespace AgendaContactos
                 }
             }
             txtBoxNombre.Clear();
-            pbFoto.Image = null;
+            pbFoto.ImageLocation = null;
         }
 
         bool ValidarCamposObligatorios()//responde a la pregunta de: hay campos obligatorios vacios?
@@ -75,10 +77,19 @@ namespace AgendaContactos
             }
             contacto = new Contacto()
             {
+                Id = json.ObtenerIdSiguiente(),
                 Nombres = txtBoxNombre.Text,
                 Apellidos = txtBoxApellido.Text,
                 Descripcion = txtBoxDescripcion.Text,
+                TelefonoPersonal = maskedTxtBoxTelefonoPersonal.Text,
+                TelefonoResidencial = maskedTxtBoxTelefonoResidencial.Text,
+                TelefonoTrabajo = maskedTxtBoxTelefonoTrabajo.Text,
+                Apodo = txtBoxApodo.Text,
+                Categoria =cbCategoria.Text,
+                CorreoElectronico = txtBoxCorreoElectronico.Text,
+                FechaNacimiento = dtpNacimiento.Value,
             };
+
             listadoContacto.Add(contacto);
             json.GuardarContactos(listadoContacto);
             MessageBox.Show("Cambios guardados con exito", "EXITO", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -87,6 +98,21 @@ namespace AgendaContactos
         private void bttnCancelar_Click(object sender, EventArgs e)
         {
             SetEstadoInicial();
+        }
+
+        private void cbCategoria_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbCategoria_Click(object sender, EventArgs e)
+        {
+            //cbCategoria.DataSource = 
+        }
+
+        private void AgregarContacto_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

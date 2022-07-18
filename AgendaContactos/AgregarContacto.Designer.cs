@@ -137,6 +137,7 @@
             // 
             // maskedTxtBoxTelefonoResidencial
             // 
+            this.maskedTxtBoxTelefonoResidencial.AllowPromptAsInput = false;
             this.maskedTxtBoxTelefonoResidencial.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -145,11 +146,14 @@
             this.maskedTxtBoxTelefonoResidencial.Location = new System.Drawing.Point(150, 147);
             this.maskedTxtBoxTelefonoResidencial.Mask = "(999) 000-0000";
             this.maskedTxtBoxTelefonoResidencial.Name = "maskedTxtBoxTelefonoResidencial";
+            this.maskedTxtBoxTelefonoResidencial.PromptChar = ' ';
             this.maskedTxtBoxTelefonoResidencial.Size = new System.Drawing.Size(251, 14);
             this.maskedTxtBoxTelefonoResidencial.TabIndex = 39;
+            this.maskedTxtBoxTelefonoResidencial.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // maskedTxtBoxTelefonoTrabajo
             // 
+            this.maskedTxtBoxTelefonoTrabajo.AllowPromptAsInput = false;
             this.maskedTxtBoxTelefonoTrabajo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -158,11 +162,14 @@
             this.maskedTxtBoxTelefonoTrabajo.Location = new System.Drawing.Point(150, 119);
             this.maskedTxtBoxTelefonoTrabajo.Mask = "(999) 000-0000";
             this.maskedTxtBoxTelefonoTrabajo.Name = "maskedTxtBoxTelefonoTrabajo";
+            this.maskedTxtBoxTelefonoTrabajo.PromptChar = ' ';
             this.maskedTxtBoxTelefonoTrabajo.Size = new System.Drawing.Size(251, 14);
             this.maskedTxtBoxTelefonoTrabajo.TabIndex = 38;
+            this.maskedTxtBoxTelefonoTrabajo.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // maskedTxtBoxTelefonoPersonal
             // 
+            this.maskedTxtBoxTelefonoPersonal.AllowPromptAsInput = false;
             this.maskedTxtBoxTelefonoPersonal.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -171,8 +178,10 @@
             this.maskedTxtBoxTelefonoPersonal.Location = new System.Drawing.Point(148, 89);
             this.maskedTxtBoxTelefonoPersonal.Mask = "(999) 000-0000";
             this.maskedTxtBoxTelefonoPersonal.Name = "maskedTxtBoxTelefonoPersonal";
+            this.maskedTxtBoxTelefonoPersonal.PromptChar = ' ';
             this.maskedTxtBoxTelefonoPersonal.Size = new System.Drawing.Size(251, 14);
             this.maskedTxtBoxTelefonoPersonal.TabIndex = 37;
+            this.maskedTxtBoxTelefonoPersonal.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // txtBoxApodo
             // 
@@ -255,6 +264,8 @@
             this.cbCategoria.Name = "cbCategoria";
             this.cbCategoria.Size = new System.Drawing.Size(251, 23);
             this.cbCategoria.TabIndex = 20;
+            this.cbCategoria.SelectedIndexChanged += new System.EventHandler(this.cbCategoria_SelectedIndexChanged);
+            this.cbCategoria.Click += new System.EventHandler(this.cbCategoria_Click);
             // 
             // label3
             // 
@@ -450,6 +461,7 @@
             this.Controls.Add(this.gbDatosPersonales);
             this.Name = "AgregarContacto";
             this.Text = "AgregarContacto";
+            this.Load += new System.EventHandler(this.AgregarContacto_Load);
             this.gbDatosPersonales.ResumeLayout(false);
             this.gbDatosPersonales.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).EndInit();

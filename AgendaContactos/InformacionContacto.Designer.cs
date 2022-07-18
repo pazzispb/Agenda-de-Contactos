@@ -403,6 +403,7 @@
             this.bttnEliminar.TabIndex = 41;
             this.bttnEliminar.Text = "Eliminar";
             this.bttnEliminar.UseVisualStyleBackColor = false;
+            this.bttnEliminar.Click += new System.EventHandler(this.bttnEliminar_Click);
             // 
             // bttnActualizar
             // 
@@ -420,6 +421,7 @@
             this.bttnActualizar.TabIndex = 42;
             this.bttnActualizar.Text = "Actualizar";
             this.bttnActualizar.UseVisualStyleBackColor = false;
+            this.bttnActualizar.Click += new System.EventHandler(this.bttnActualizar_Click);
             // 
             // bttnSubirFoto
             // 
