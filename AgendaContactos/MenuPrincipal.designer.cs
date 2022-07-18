@@ -208,7 +208,7 @@
             this.Controls.Add(this.panelFormHijo);
             this.Controls.Add(this.panelSideMenu);
             this.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "MenuPrincipal";
             this.Text = "Agenda de Contactos";
             this.panelSideMenu.ResumeLayout(false);

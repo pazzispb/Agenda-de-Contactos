@@ -120,5 +120,6 @@ namespace AgendaContactos
             MessageBox.Show("Contacto eliminado con exito", "EXITO", MessageBoxButtons.OK, MessageBoxIcon.Information);
             Program.aplicacion.abrirSubFormulario(new VisualizarContactos()); // Regresara a la pantalla de inicio
         }
+
     }
 }
