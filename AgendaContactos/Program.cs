@@ -16,13 +16,8 @@ namespace AgendaContactos
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-
-            //Application.Run(new InformacionContacto(1)); //Descomentar para probar la funcionalidad de Informacion de Contacto
-            Application.Run(new MenuPrincipal());
-
             aplicacion = new MenuPrincipal();
             Application.Run(aplicacion);
- 
         }
         static public MenuPrincipal aplicacion;
     }

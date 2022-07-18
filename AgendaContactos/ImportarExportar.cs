@@ -173,14 +173,14 @@ namespace AgendaContactos
                         Descripcion = (string)row.Cells["Descripcion"].Value,
                         Apodo = (string)row.Cells["Apodo"].Value
                     };
-                    //if(exportar == false)
-                    //{
-                    //    if (!ValidarNombreUnico(contacto.Nombres))
-                    //    {
-                    //        MessageBox.Show("De los seleccionados, hay un contacto que ya existe dentro del sistema", "ALERTA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    //        return;
-                    //    }
-                    //}
+                    if (exportar == false)
+                    {
+                        if (!ValidarNombreUnico(contacto.Nombres + " " + contacto.Apellidos, lista))
+                        {
+                            MessageBox.Show("De los seleccionados, hay un contacto que ya existe dentro del sistema", "ALERTA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            return;
+                        }
+                    }
                     lista.Add(contacto);
                 }
             }
@@ -222,11 +222,11 @@ namespace AgendaContactos
             }
             json.GuardarCategorias(listaCategoria);
         }
-        bool ValidarNombreUnico(string nombre)//responde a la pregunta de: hay otros contactos con el nombre que se intenta registrar
+        bool ValidarNombreUnico(string nombre, List<Contacto> lista)//responde a la pregunta de: hay otros contactos con el nombre que se intenta registrar
         {
             var json = new Json();
-            if (json.ObtenerCategorias() == null) return true;
-            var cantidad = listadoContacto.Count(x => x.Nombres == nombre);//cuentos contactos con ese mismo nombre hay en el json
+            if (json.ObtenerContactos().Concat(lista) == null) return true;
+            var cantidad = listadoContacto.Concat(lista).Count(x => (x.Nombres + " " + x.Apellidos).ToLower().Trim() == nombre.ToLower().Trim());//cuentos contactos con ese mismo nombre hay en el json
             return (cantidad < 1);//true si es unico, false si no lo es           
         }
 
