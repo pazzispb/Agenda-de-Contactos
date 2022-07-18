@@ -37,10 +37,10 @@ namespace AgendaContactos
             dgvContactos.Columns["isFavorito"].Visible = false;
             dgvContactos.Columns["isEmergencia"].Visible = false;
             dgvContactos.Columns["UrlFoto"].Visible = false;
+            dgvContactos.AutoResizeColumns();
         }
         void ConfigurarExportacion()
         {
-            SetEstadoInicial();
             lblMensaje.Text = "Seleccione los contactos a exportar";
             HabilitarControles();
             CargarContactos();
@@ -49,7 +49,6 @@ namespace AgendaContactos
         }
         void ConfigurarImportacion()
         {
-            SetEstadoInicial();
             OpenFileDialog fd = new OpenFileDialog();//ventana para seleccionar un archivo
             fd.Filter = "Export Files|*.exp"; //archivo especifico para las exportaciones del programa
             DialogResult resultado = fd.ShowDialog(); //almacena el resultado de la ventana de dialogo
@@ -138,7 +137,8 @@ namespace AgendaContactos
         }
         void SetEstadoInicial()
         {
-            ConfigurarExportacion();//el modo de exportacion es el default del formulario
+            DeshabilitarControles();
+            dgvContactos.DataSource = null;
         }
         private void btnCancelar_Click(object sender, EventArgs e)
         {
@@ -200,6 +200,7 @@ namespace AgendaContactos
             {
                 json.ImportarContactos(lista); //guarda los contactos importados del archivo
                 AgregarCategorias(lista);//en caso de que no existan las categorias, agregalas
+                MessageBox.Show("Contactos agregados con exito", "EXITO", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             SetEstadoInicial();
         }
@@ -212,7 +213,7 @@ namespace AgendaContactos
                 if (!string.IsNullOrWhiteSpace(c.Categoria))//si el campo no esta vacio
                 {
                     if (listaCategoria.Count(x => x.Nombre.ToLower().Trim() == c.Categoria.ToLower().Trim()) == 0) //si la categoria no existe dentro del programa
-                        listaCategoria.Add(new Categoria { Nombre = c.Categoria });//agrega la categoria a la lista
+                        listaCategoria.Add(new Categoria { Nombre = c.Categoria, isVisible = true });//agrega la categoria a la lista
                 }
             }
             json.GuardarCategorias(listaCategoria);//guarda el nuevo listado de categorias
@@ -220,7 +221,8 @@ namespace AgendaContactos
         bool ValidarNombreUnico(string nombre, List<Contacto> lista)//responde a la pregunta de: hay otros contactos con el nombre que se intenta registrar
         {
             var json = new Json();
-            if (json.ObtenerContactos().Concat(lista) == null) return true; //si la lista esta vacia
+            listadoContacto = json.ObtenerContactos();
+            if (listadoContacto.Concat(lista) == null) return true; //si la lista esta vacia
             var cantidad = listadoContacto.Concat(lista).Count(x => (x.Nombres + " " + x.Apellidos).ToLower().Trim() == nombre.ToLower().Trim());//cuentos contactos con ese mismo nombre hay en el json
             return (cantidad < 1);//true si es unico, false si no lo es           
         }
