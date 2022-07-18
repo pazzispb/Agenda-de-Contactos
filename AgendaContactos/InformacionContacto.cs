@@ -14,17 +14,10 @@ namespace AgendaContactos
     public partial class InformacionContacto : Form
     {
         int id; //Id del contacto cuyos datos se mostraran en este formulario
-        List<Categoria> listado = new List<Categoria>();
         public InformacionContacto(int id)
         {
             InitializeComponent();
             this.id = id;
-            var json = new Json();
-            cbCategoria.DataSource = null;
-            listado = json.ObtenerCategorias();
-            cbCategoria.DataSource = listado;
-            cbCategoria.DisplayMember = "Nombre";
-            cbCategoria.ValueMember = "Nombre";
             EstadoInicial();
         }
 
@@ -32,20 +25,26 @@ namespace AgendaContactos
         {
             var json = new Json();
             Contacto contacto = json.ObtenerContactos().FirstOrDefault(x => x.Id == id); // Filtramos el contacto por el Id para tener sus datos y presentarlos por pantalla
+            
             txtBoxNombre.Text = contacto.Nombres;
             txtBoxApellido.Text = contacto.Apellidos;
-            maskedTxtBoxTelefonoPersonal.Text = contacto.TelefonoPersonal;
-            maskedTxtBoxTelefonoResidencial.Text = contacto.TelefonoResidencial;
-            maskedTxtBoxTelefonoTrabajo.Text = contacto.TelefonoTrabajo;
-            var categoria = listado.FirstOrDefault(x => x.Nombre == contacto.Categoria);
-            cbCategoria.SelectedIndex = listado.IndexOf(categoria); // Cada dato se va a mostrar con el equivalente al dato ya registrado del contacto
-            dtpNacimiento.Value = contacto.FechaNacimiento;
             txtBoxCorreoElectronico.Text = contacto.CorreoElectronico;
             txtBoxDescripcion.Text = contacto.Descripcion;
             txtBoxApodo.Text = contacto.Apodo;
+            dtpNacimiento.Value = contacto.FechaNacimiento;
             pbFoto.ImageLocation = contacto.UrlFoto;
             checkBoxIsFavorito.Checked = contacto.isFavorito;
             checkBoxIsEmergencia.Checked = contacto.isEmergencia;
+            maskedTxtBoxTelefonoPersonal.Text = contacto.TelefonoPersonal;
+            maskedTxtBoxTelefonoResidencial.Text = contacto.TelefonoResidencial;
+            maskedTxtBoxTelefonoTrabajo.Text = contacto.TelefonoTrabajo;
+            
+            var listado = json.ObtenerCategorias();
+            cbCategoria.DataSource = listado ?? null;
+            var categoria = listado.FirstOrDefault(x => x.Nombre == contacto.Categoria);
+            cbCategoria.SelectedIndex = listado.IndexOf(categoria); // Cada dato se va a mostrar con el equivalente al dato ya registrado del contacto
+            cbCategoria.DisplayMember = "Nombre";
+            cbCategoria.ValueMember = "Nombre";
         }
 
 
@@ -110,7 +109,6 @@ namespace AgendaContactos
             json.GuardarContactos(listadoContactos); // Se guardaran los cambios en el Json
             MessageBox.Show("Contacto eliminado con exito", "EXITO", MessageBoxButtons.OK, MessageBoxIcon.Information);
             Program.aplicacion.abrirSubFormulario(new VisualizarContactos()); // Regresara a la pantalla de inicio
-
         }
     }
 }
