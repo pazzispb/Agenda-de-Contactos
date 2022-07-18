@@ -53,8 +53,9 @@
             this.panelSideMenu.Controls.Add(this.panePhoto);
             this.panelSideMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelSideMenu.Location = new System.Drawing.Point(0, 0);
+            this.panelSideMenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelSideMenu.Name = "panelSideMenu";
-            this.panelSideMenu.Size = new System.Drawing.Size(230, 486);
+            this.panelSideMenu.Size = new System.Drawing.Size(307, 598);
             this.panelSideMenu.TabIndex = 0;
             // 
             // iconButton1
@@ -69,10 +70,11 @@
             this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton1.IconSize = 30;
             this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton1.Location = new System.Drawing.Point(0, 293);
+            this.iconButton1.Location = new System.Drawing.Point(0, 360);
+            this.iconButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.iconButton1.Size = new System.Drawing.Size(230, 53);
+            this.iconButton1.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
+            this.iconButton1.Size = new System.Drawing.Size(307, 65);
             this.iconButton1.TabIndex = 8;
             this.iconButton1.Tag = "Exportar/Importar";
             this.iconButton1.Text = "Importar/Exportar";
@@ -91,10 +93,11 @@
             this.btnCategorias.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnCategorias.IconSize = 30;
             this.btnCategorias.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCategorias.Location = new System.Drawing.Point(0, 240);
+            this.btnCategorias.Location = new System.Drawing.Point(0, 295);
+            this.btnCategorias.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCategorias.Name = "btnCategorias";
-            this.btnCategorias.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnCategorias.Size = new System.Drawing.Size(230, 53);
+            this.btnCategorias.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
+            this.btnCategorias.Size = new System.Drawing.Size(307, 65);
             this.btnCategorias.TabIndex = 7;
             this.btnCategorias.Tag = "Categorias";
             this.btnCategorias.Text = "Categorias";
@@ -113,10 +116,11 @@
             this.btnContactos.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnContactos.IconSize = 30;
             this.btnContactos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnContactos.Location = new System.Drawing.Point(0, 187);
+            this.btnContactos.Location = new System.Drawing.Point(0, 230);
+            this.btnContactos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnContactos.Name = "btnContactos";
-            this.btnContactos.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnContactos.Size = new System.Drawing.Size(230, 53);
+            this.btnContactos.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
+            this.btnContactos.Size = new System.Drawing.Size(307, 65);
             this.btnContactos.TabIndex = 6;
             this.btnContactos.Tag = "Contactos";
             this.btnContactos.Text = "Contactos";
@@ -136,10 +140,11 @@
             this.btnPaginaPrincipal.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnPaginaPrincipal.IconSize = 30;
             this.btnPaginaPrincipal.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPaginaPrincipal.Location = new System.Drawing.Point(0, 134);
+            this.btnPaginaPrincipal.Location = new System.Drawing.Point(0, 165);
+            this.btnPaginaPrincipal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnPaginaPrincipal.Name = "btnPaginaPrincipal";
-            this.btnPaginaPrincipal.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnPaginaPrincipal.Size = new System.Drawing.Size(230, 53);
+            this.btnPaginaPrincipal.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
+            this.btnPaginaPrincipal.Size = new System.Drawing.Size(307, 65);
             this.btnPaginaPrincipal.TabIndex = 5;
             this.btnPaginaPrincipal.Tag = "Pagina Principal";
             this.btnPaginaPrincipal.Text = "Pagina Principal";
@@ -152,17 +157,19 @@
             this.panePhoto.Controls.Add(this.btnMenu);
             this.panePhoto.Dock = System.Windows.Forms.DockStyle.Top;
             this.panePhoto.Location = new System.Drawing.Point(0, 0);
+            this.panePhoto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panePhoto.Name = "panePhoto";
-            this.panePhoto.Size = new System.Drawing.Size(230, 134);
+            this.panePhoto.Size = new System.Drawing.Size(307, 165);
             this.panePhoto.TabIndex = 0;
             // 
             // pbLogo
             // 
             this.pbLogo.BackColor = System.Drawing.Color.Transparent;
             this.pbLogo.Image = ((System.Drawing.Image)(resources.GetObject("pbLogo.Image")));
-            this.pbLogo.Location = new System.Drawing.Point(56, 0);
+            this.pbLogo.Location = new System.Drawing.Point(55, 13);
+            this.pbLogo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pbLogo.Name = "pbLogo";
-            this.pbLogo.Size = new System.Drawing.Size(133, 110);
+            this.pbLogo.Size = new System.Drawing.Size(179, 135);
             this.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbLogo.TabIndex = 3;
             this.pbLogo.TabStop = false;
@@ -182,9 +189,10 @@
             this.btnMenu.IconSize = 30;
             this.btnMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMenu.Location = new System.Drawing.Point(0, 0);
+            this.btnMenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnMenu.Name = "btnMenu";
-            this.btnMenu.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnMenu.Size = new System.Drawing.Size(230, 134);
+            this.btnMenu.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
+            this.btnMenu.Size = new System.Drawing.Size(307, 165);
             this.btnMenu.TabIndex = 2;
             this.btnMenu.Tag = "Menu";
             this.btnMenu.UseVisualStyleBackColor = true;
@@ -193,22 +201,24 @@
             // panelFormHijo
             // 
             this.panelFormHijo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelFormHijo.Location = new System.Drawing.Point(230, 0);
+            this.panelFormHijo.Location = new System.Drawing.Point(307, 0);
+            this.panelFormHijo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelFormHijo.Name = "panelFormHijo";
-            this.panelFormHijo.Size = new System.Drawing.Size(615, 486);
+            this.panelFormHijo.Size = new System.Drawing.Size(820, 598);
             this.panelFormHijo.TabIndex = 1;
             // 
             // MenuPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(845, 486);
+            this.ClientSize = new System.Drawing.Size(1127, 598);
             this.Controls.Add(this.panelFormHijo);
             this.Controls.Add(this.panelSideMenu);
             this.ForeColor = System.Drawing.SystemColors.Desktop;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "MenuPrincipal";
             this.Text = "Agenda de Contactos";
             this.panelSideMenu.ResumeLayout(false);
