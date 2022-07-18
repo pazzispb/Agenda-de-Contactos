@@ -19,8 +19,6 @@ namespace AgendaContactos
             InitializeComponent();
             this.id = id;
             EstadoInicial();
-
-
         }
 
         void EstadoInicial()
@@ -44,10 +42,13 @@ namespace AgendaContactos
         private void bttnActualizar_Click(object sender, EventArgs e)
         {
             var json = new Json();
-            Contacto contacto = json.ObtenerContactos().FirstOrDefault(x => x.Id == id);
-            contacto.Apellidos = txtBoxApellido.Text;
-            json.GuardarContactos(json.ObtenerContactos());
-
+            var listadoContactos = json.ObtenerContactos();
+            Contacto contacto = listadoContactos.FirstOrDefault(x => x.Id == id);
+            //busca el indice de contacto en la lista listadoContactos con .IndexOf()
+            //ese indice almacenalo en una variable
+            //para actualizar la informacion accede a la posicion de ese elemento en el listado de la siguiente manera listadoContactos[indice].nombre
+            //eso lo haras con cada uno de los campos
+            json.GuardarContactos(listadoContactos);//al final se guarda esa lista que modificaste
         }
 
         private void bttnEliminar_Click(object sender, EventArgs e)
