@@ -88,6 +88,7 @@
             this.gbDatosPersonales.Controls.Add(this.lblNombre);
             this.gbDatosPersonales.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.gbDatosPersonales.Font = new System.Drawing.Font("Montserrat SemiBold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbDatosPersonales.ForeColor = System.Drawing.Color.Black;
             this.gbDatosPersonales.Location = new System.Drawing.Point(12, 87);
             this.gbDatosPersonales.Name = "gbDatosPersonales";
             this.gbDatosPersonales.Size = new System.Drawing.Size(415, 313);
@@ -100,6 +101,7 @@
             this.checkBoxIsFavorito.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.checkBoxIsFavorito.AutoSize = true;
             this.checkBoxIsFavorito.Font = new System.Drawing.Font("Montserrat Medium", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxIsFavorito.ForeColor = System.Drawing.Color.Black;
             this.checkBoxIsFavorito.Location = new System.Drawing.Point(435, 373);
             this.checkBoxIsFavorito.Name = "checkBoxIsFavorito";
             this.checkBoxIsFavorito.Size = new System.Drawing.Size(125, 19);
@@ -112,6 +114,7 @@
             this.checkBoxIsEmergencia.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.checkBoxIsEmergencia.AutoSize = true;
             this.checkBoxIsEmergencia.Font = new System.Drawing.Font("Montserrat Medium", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxIsEmergencia.ForeColor = System.Drawing.Color.Black;
             this.checkBoxIsEmergencia.Location = new System.Drawing.Point(435, 350);
             this.checkBoxIsEmergencia.Name = "checkBoxIsEmergencia";
             this.checkBoxIsEmergencia.Size = new System.Drawing.Size(168, 19);
@@ -429,6 +432,7 @@
             this.bttnSubirFoto.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Highlight;
             this.bttnSubirFoto.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Highlight;
             this.bttnSubirFoto.Font = new System.Drawing.Font("Montserrat", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bttnSubirFoto.ForeColor = System.Drawing.Color.Black;
             this.bttnSubirFoto.Location = new System.Drawing.Point(433, 314);
             this.bttnSubirFoto.Name = "bttnSubirFoto";
             this.bttnSubirFoto.Size = new System.Drawing.Size(170, 25);
@@ -457,6 +461,7 @@
             this.lblAgregarContacto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.lblAgregarContacto.AutoSize = true;
             this.lblAgregarContacto.Font = new System.Drawing.Font("Montserrat SemiBold", 24F, System.Drawing.FontStyle.Bold);
+            this.lblAgregarContacto.ForeColor = System.Drawing.Color.Black;
             this.lblAgregarContacto.Location = new System.Drawing.Point(144, 24);
             this.lblAgregarContacto.Name = "lblAgregarContacto";
             this.lblAgregarContacto.Size = new System.Drawing.Size(312, 44);
