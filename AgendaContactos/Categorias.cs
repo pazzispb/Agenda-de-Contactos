@@ -136,14 +136,5 @@ namespace AgendaContactos
             //ConfigurarFormulario();
         }
 
-        private void Categorias_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dgvCategorias_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
     }
 }

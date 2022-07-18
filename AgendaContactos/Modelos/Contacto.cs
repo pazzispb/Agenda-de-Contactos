@@ -27,4 +27,12 @@ namespace AgendaContactos.Modelos
     {
         public bool Seleccion { get; set; }
     }
+    public class VistaContacto{
+
+        public int? Id { get; set; }
+        public string Nombre { get; set; }
+        public string TelefonoPersonal { get; set; }
+        public string TelefonoTrabajo { get; set; }
+        public string TelefonoResidencial { get; set; }
+    }
 }

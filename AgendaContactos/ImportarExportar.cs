@@ -229,5 +229,6 @@ namespace AgendaContactos
             var cantidad = listadoContacto.Count(x => x.Nombres == nombre);//cuentos contactos con ese mismo nombre hay en el json
             return (cantidad < 1);//true si es unico, false si no lo es           
         }
+
     }
 }
