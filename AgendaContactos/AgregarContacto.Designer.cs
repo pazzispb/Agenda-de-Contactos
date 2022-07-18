@@ -90,33 +90,31 @@
             this.gbDatosPersonales.Font = new System.Drawing.Font("Montserrat SemiBold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbDatosPersonales.Location = new System.Drawing.Point(12, 87);
             this.gbDatosPersonales.Name = "gbDatosPersonales";
-            this.gbDatosPersonales.Size = new System.Drawing.Size(428, 313);
+            this.gbDatosPersonales.Size = new System.Drawing.Size(415, 313);
             this.gbDatosPersonales.TabIndex = 5;
             this.gbDatosPersonales.TabStop = false;
             this.gbDatosPersonales.Text = "Datos Personales";
             // 
             // checkBoxIsFavorito
             // 
-            this.checkBoxIsFavorito.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.checkBoxIsFavorito.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.checkBoxIsFavorito.AutoSize = true;
-            this.checkBoxIsFavorito.Location = new System.Drawing.Point(454, 362);
+            this.checkBoxIsFavorito.Font = new System.Drawing.Font("Montserrat Medium", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxIsFavorito.Location = new System.Drawing.Point(435, 373);
             this.checkBoxIsFavorito.Name = "checkBoxIsFavorito";
-            this.checkBoxIsFavorito.Size = new System.Drawing.Size(107, 17);
+            this.checkBoxIsFavorito.Size = new System.Drawing.Size(125, 19);
             this.checkBoxIsFavorito.TabIndex = 42;
             this.checkBoxIsFavorito.Text = "Contacto favorito";
             this.checkBoxIsFavorito.UseVisualStyleBackColor = true;
             // 
             // checkBoxIsEmergencia
             // 
-            this.checkBoxIsEmergencia.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.checkBoxIsEmergencia.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.checkBoxIsEmergencia.AutoSize = true;
-            this.checkBoxIsEmergencia.Location = new System.Drawing.Point(454, 339);
+            this.checkBoxIsEmergencia.Font = new System.Drawing.Font("Montserrat Medium", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxIsEmergencia.Location = new System.Drawing.Point(435, 350);
             this.checkBoxIsEmergencia.Name = "checkBoxIsEmergencia";
-            this.checkBoxIsEmergencia.Size = new System.Drawing.Size(142, 17);
+            this.checkBoxIsEmergencia.Size = new System.Drawing.Size(168, 19);
             this.checkBoxIsEmergencia.TabIndex = 41;
             this.checkBoxIsEmergencia.Text = "Contacto de emergencia";
             this.checkBoxIsEmergencia.UseVisualStyleBackColor = true;
@@ -131,7 +129,7 @@
             this.txtBoxCorreoElectronico.Font = new System.Drawing.Font("Montserrat Medium", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxCorreoElectronico.Location = new System.Drawing.Point(162, 236);
             this.txtBoxCorreoElectronico.Name = "txtBoxCorreoElectronico";
-            this.txtBoxCorreoElectronico.Size = new System.Drawing.Size(252, 15);
+            this.txtBoxCorreoElectronico.Size = new System.Drawing.Size(239, 15);
             this.txtBoxCorreoElectronico.TabIndex = 40;
             // 
             // maskedTxtBoxTelefonoResidencial
@@ -147,7 +145,7 @@
             this.maskedTxtBoxTelefonoResidencial.Mask = "(999) 000-0000";
             this.maskedTxtBoxTelefonoResidencial.Name = "maskedTxtBoxTelefonoResidencial";
             this.maskedTxtBoxTelefonoResidencial.PromptChar = ' ';
-            this.maskedTxtBoxTelefonoResidencial.Size = new System.Drawing.Size(252, 15);
+            this.maskedTxtBoxTelefonoResidencial.Size = new System.Drawing.Size(239, 15);
             this.maskedTxtBoxTelefonoResidencial.TabIndex = 39;
             this.maskedTxtBoxTelefonoResidencial.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
@@ -164,7 +162,7 @@
             this.maskedTxtBoxTelefonoTrabajo.Mask = "(999) 000-0000";
             this.maskedTxtBoxTelefonoTrabajo.Name = "maskedTxtBoxTelefonoTrabajo";
             this.maskedTxtBoxTelefonoTrabajo.PromptChar = ' ';
-            this.maskedTxtBoxTelefonoTrabajo.Size = new System.Drawing.Size(252, 15);
+            this.maskedTxtBoxTelefonoTrabajo.Size = new System.Drawing.Size(239, 15);
             this.maskedTxtBoxTelefonoTrabajo.TabIndex = 38;
             this.maskedTxtBoxTelefonoTrabajo.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
@@ -181,7 +179,7 @@
             this.maskedTxtBoxTelefonoPersonal.Mask = "(999) 000-0000";
             this.maskedTxtBoxTelefonoPersonal.Name = "maskedTxtBoxTelefonoPersonal";
             this.maskedTxtBoxTelefonoPersonal.PromptChar = ' ';
-            this.maskedTxtBoxTelefonoPersonal.Size = new System.Drawing.Size(252, 15);
+            this.maskedTxtBoxTelefonoPersonal.Size = new System.Drawing.Size(239, 15);
             this.maskedTxtBoxTelefonoPersonal.TabIndex = 37;
             this.maskedTxtBoxTelefonoPersonal.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
@@ -195,7 +193,7 @@
             this.txtBoxApodo.Font = new System.Drawing.Font("Montserrat Medium", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxApodo.Location = new System.Drawing.Point(162, 287);
             this.txtBoxApodo.Name = "txtBoxApodo";
-            this.txtBoxApodo.Size = new System.Drawing.Size(252, 15);
+            this.txtBoxApodo.Size = new System.Drawing.Size(239, 15);
             this.txtBoxApodo.TabIndex = 27;
             // 
             // lblApodo
@@ -221,7 +219,7 @@
             this.txtBoxDescripcion.Font = new System.Drawing.Font("Montserrat Medium", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxDescripcion.Location = new System.Drawing.Point(162, 262);
             this.txtBoxDescripcion.Name = "txtBoxDescripcion";
-            this.txtBoxDescripcion.Size = new System.Drawing.Size(252, 15);
+            this.txtBoxDescripcion.Size = new System.Drawing.Size(239, 15);
             this.txtBoxDescripcion.TabIndex = 24;
             // 
             // dtpNacimiento
@@ -231,7 +229,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dtpNacimiento.Location = new System.Drawing.Point(163, 206);
             this.dtpNacimiento.Name = "dtpNacimiento";
-            this.dtpNacimiento.Size = new System.Drawing.Size(253, 22);
+            this.dtpNacimiento.Size = new System.Drawing.Size(240, 22);
             this.dtpNacimiento.TabIndex = 23;
             // 
             // label2
@@ -269,7 +267,7 @@
             this.cbCategoria.FormattingEnabled = true;
             this.cbCategoria.Location = new System.Drawing.Point(164, 173);
             this.cbCategoria.Name = "cbCategoria";
-            this.cbCategoria.Size = new System.Drawing.Size(252, 24);
+            this.cbCategoria.Size = new System.Drawing.Size(239, 24);
             this.cbCategoria.TabIndex = 20;
             this.cbCategoria.Click += new System.EventHandler(this.cbCategoria_Click);
             // 
@@ -348,7 +346,7 @@
             this.txtBoxApellido.Font = new System.Drawing.Font("Montserrat Medium", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxApellido.Location = new System.Drawing.Point(162, 61);
             this.txtBoxApellido.Name = "txtBoxApellido";
-            this.txtBoxApellido.Size = new System.Drawing.Size(254, 15);
+            this.txtBoxApellido.Size = new System.Drawing.Size(241, 15);
             this.txtBoxApellido.TabIndex = 8;
             // 
             // lblApellido
@@ -374,7 +372,7 @@
             this.txtBoxNombre.Font = new System.Drawing.Font("Montserrat Medium", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxNombre.Location = new System.Drawing.Point(162, 29);
             this.txtBoxNombre.Name = "txtBoxNombre";
-            this.txtBoxNombre.Size = new System.Drawing.Size(254, 15);
+            this.txtBoxNombre.Size = new System.Drawing.Size(241, 15);
             this.txtBoxNombre.TabIndex = 3;
             // 
             // lblNombre
@@ -431,9 +429,9 @@
             this.bttnSubirFoto.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Highlight;
             this.bttnSubirFoto.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Highlight;
             this.bttnSubirFoto.Font = new System.Drawing.Font("Montserrat", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bttnSubirFoto.Location = new System.Drawing.Point(446, 308);
+            this.bttnSubirFoto.Location = new System.Drawing.Point(433, 314);
             this.bttnSubirFoto.Name = "bttnSubirFoto";
-            this.bttnSubirFoto.Size = new System.Drawing.Size(157, 25);
+            this.bttnSubirFoto.Size = new System.Drawing.Size(170, 25);
             this.bttnSubirFoto.TabIndex = 36;
             this.bttnSubirFoto.Text = "Subir Foto";
             this.bttnSubirFoto.UseVisualStyleBackColor = true;
@@ -443,11 +441,13 @@
             // 
             this.pbFoto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbFoto.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.pbFoto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pbFoto.Image = ((System.Drawing.Image)(resources.GetObject("pbFoto.Image")));
             this.pbFoto.InitialImage = ((System.Drawing.Image)(resources.GetObject("pbFoto.InitialImage")));
-            this.pbFoto.Location = new System.Drawing.Point(446, 97);
+            this.pbFoto.Location = new System.Drawing.Point(433, 97);
             this.pbFoto.Name = "pbFoto";
-            this.pbFoto.Size = new System.Drawing.Size(157, 205);
+            this.pbFoto.Size = new System.Drawing.Size(170, 205);
             this.pbFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbFoto.TabIndex = 35;
             this.pbFoto.TabStop = false;
