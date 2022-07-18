@@ -39,20 +39,71 @@ namespace AgendaContactos
 
         }
 
+
+        bool ValidarCamposObligatorios()
+        {
+            return (String.IsNullOrWhiteSpace(txtBoxNombre.Text));
+        }
+
+        bool ValidarNombreUnico(string nombre)
+        {
+            var json = new Json();
+            if (json.ObtenerContactos() == null) return true;
+            var cantidad = json.ObtenerContactos().Count(x => x.Nombres == nombre);
+            return (cantidad < 1);     
+        }
+
         private void bttnActualizar_Click(object sender, EventArgs e)
+        {
+
+
+            if (ValidarCamposObligatorios()) 
+            {
+                MessageBox.Show("Rellene los campos vacios", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (!ValidarNombreUnico(txtBoxNombre.Text)) 
+            {
+                MessageBox.Show("El nombre que introdujo ya existe", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            var json = new Json();
+            var listadoContactos = json.ObtenerContactos();
+            Contacto contacto = listadoContactos.FirstOrDefault(x => x.Id == id);
+            var index = listadoContactos.IndexOf(contacto);
+            listadoContactos[index].Nombres = txtBoxNombre.Text;
+            listadoContactos[index].Apellidos = txtBoxApellido.Text;
+            listadoContactos[index].TelefonoPersonal = maskedTxtBoxTelefonoPersonal.Text;
+            listadoContactos[index].TelefonoResidencial = maskedTxtBoxTelefonoResidencial.Text;
+            listadoContactos[index].TelefonoTrabajo = maskedTxtBoxTelefonoTrabajo.Text;
+            listadoContactos[index].Categoria = cbCategoria.Text;
+            listadoContactos[index].FechaNacimiento = dtpNacimiento.Value;
+            listadoContactos[index].CorreoElectronico = txtBoxCorreoElectronico.Text;
+            listadoContactos[index].Descripcion = txtBoxDescripcion.Text;
+            listadoContactos[index].Apodo = txtBoxApodo.Text;
+            if (checkBoxIsFavorito.Checked)
+            {
+                listadoContactos[index].isFavorito = true;
+            }
+            if (checkBoxIsEmergencia.Checked)
+            {
+                listadoContactos[index].isEmergencia = true;
+            }
+
+            json.GuardarContactos(listadoContactos);
+            MessageBox.Show("Cambios guardados con exito", "EXITO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            Program.aplicacion.abrirSubFormulario(new VisualizarContactos());
+        }
+        private void bttnEliminar_Click(object sender, EventArgs e)
         {
             var json = new Json();
             var listadoContactos = json.ObtenerContactos();
             Contacto contacto = listadoContactos.FirstOrDefault(x => x.Id == id);
-            //busca el indice de contacto en la lista listadoContactos con .IndexOf()
-            //ese indice almacenalo en una variable
-            //para actualizar la informacion accede a la posicion de ese elemento en el listado de la siguiente manera listadoContactos[indice].nombre
-            //eso lo haras con cada uno de los campos
-            json.GuardarContactos(listadoContactos);//al final se guarda esa lista que modificaste
-        }
-
-        private void bttnEliminar_Click(object sender, EventArgs e)
-        {
+            var index = listadoContactos.IndexOf(contacto);
+            listadoContactos.Remove(contacto);
+            json.GuardarContactos(listadoContactos);
+            Program.aplicacion.abrirSubFormulario(new VisualizarContactos());
 
         }
     }

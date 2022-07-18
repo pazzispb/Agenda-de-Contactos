@@ -62,7 +62,7 @@ namespace AgendaContactos
         private Form formActivo = null; //variable para activar y desactivar los formularios, se le da un valor inicial nulo
         public void abrirSubFormulario(Form formHijo) // metodo para abrir y cerrar los formularios hijos dentro del principal
         {
-            if(formActivo != null) // si hay un formulario abierto, sea cual sea, que se cierr
+            if(formActivo != null) // si hay un formulario abierto, sea cual sea, que se cierre
             formActivo.Close();
             formActivo = formHijo; // el form que este activo sera igual al form hijo
             formHijo.TopLevel = false; // el forms no se abrira encima del tope del principal
