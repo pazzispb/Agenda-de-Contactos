@@ -93,7 +93,7 @@
             this.gbDatosPersonales.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.gbDatosPersonales.Font = new System.Drawing.Font("Montserrat SemiBold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbDatosPersonales.ForeColor = System.Drawing.Color.Black;
-            this.gbDatosPersonales.Location = new System.Drawing.Point(16, 107);
+            this.gbDatosPersonales.Location = new System.Drawing.Point(23, 106);
             this.gbDatosPersonales.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gbDatosPersonales.Name = "gbDatosPersonales";
             this.gbDatosPersonales.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
