@@ -18,7 +18,11 @@ namespace AgendaContactos
         {
             InitializeComponent();
             this.id = id;
+            var json = new Json();
+            cbCategoria.DataSource = json.ObtenerCategorias();
+            cbCategoria.DisplayMember = "Nombre";
             EstadoInicial();
+
         }
 
         void EstadoInicial() // Este es el estado en el que se presentara el form
@@ -30,7 +34,7 @@ namespace AgendaContactos
             maskedTxtBoxTelefonoPersonal.Text = contacto.TelefonoPersonal;
             maskedTxtBoxTelefonoResidencial.Text = contacto.TelefonoResidencial;
             maskedTxtBoxTelefonoTrabajo.Text = contacto.TelefonoTrabajo;
-            cbCategoria.Text = contacto.Categoria; // Cada dato se va a mostrar con el equivalente al dato ya registrado del contacto
+            //cbCategoria.SelectedIndex = cbCategoria.Items.IndexOf(contacto.Categoria); // Cada dato se va a mostrar con el equivalente al dato ya registrado del contacto
             dtpNacimiento.Value = contacto.FechaNacimiento;
             txtBoxCorreoElectronico.Text = contacto.CorreoElectronico;
             txtBoxDescripcion.Text = contacto.Descripcion;
@@ -45,7 +49,8 @@ namespace AgendaContactos
         {
             return (String.IsNullOrWhiteSpace(txtBoxNombre.Text)|| String.IsNullOrWhiteSpace(txtBoxApellido.Text)
                 || String.IsNullOrWhiteSpace(maskedTxtBoxTelefonoPersonal.Text) || String.IsNullOrWhiteSpace(maskedTxtBoxTelefonoResidencial.Text)
-                || String.IsNullOrWhiteSpace(maskedTxtBoxTelefonoTrabajo.Text));
+                || String.IsNullOrWhiteSpace(maskedTxtBoxTelefonoTrabajo.Text)
+                || String.IsNullOrWhiteSpace(cbCategoria.Text));
         }
 
         bool ValidarNombreUnico(string nombre)  //confirmara que no exista otra persona igual en la lista de contacto

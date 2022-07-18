@@ -79,7 +79,7 @@
             this.pbFoto.Image = ((System.Drawing.Image)(resources.GetObject("pbFoto.Image")));
             this.pbFoto.InitialImage = ((System.Drawing.Image)(resources.GetObject("pbFoto.InitialImage")));
             this.pbFoto.Location = new System.Drawing.Point(639, 106);
-            this.pbFoto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pbFoto.Margin = new System.Windows.Forms.Padding(4);
             this.pbFoto.Name = "pbFoto";
             this.pbFoto.Size = new System.Drawing.Size(229, 252);
             this.pbFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -115,9 +115,9 @@
             this.gbDatosPersonales.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.gbDatosPersonales.Font = new System.Drawing.Font("Montserrat", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbDatosPersonales.Location = new System.Drawing.Point(16, 106);
-            this.gbDatosPersonales.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbDatosPersonales.Margin = new System.Windows.Forms.Padding(4);
             this.gbDatosPersonales.Name = "gbDatosPersonales";
-            this.gbDatosPersonales.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbDatosPersonales.Padding = new System.Windows.Forms.Padding(4);
             this.gbDatosPersonales.Size = new System.Drawing.Size(615, 426);
             this.gbDatosPersonales.TabIndex = 40;
             this.gbDatosPersonales.TabStop = false;
@@ -131,7 +131,7 @@
             this.checkBoxIsFavorito.AutoSize = true;
             this.checkBoxIsFavorito.Font = new System.Drawing.Font("Montserrat SemiBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBoxIsFavorito.Location = new System.Drawing.Point(21, 388);
-            this.checkBoxIsFavorito.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBoxIsFavorito.Margin = new System.Windows.Forms.Padding(4);
             this.checkBoxIsFavorito.Name = "checkBoxIsFavorito";
             this.checkBoxIsFavorito.Size = new System.Drawing.Size(167, 25);
             this.checkBoxIsFavorito.TabIndex = 42;
@@ -146,7 +146,7 @@
             this.checkBoxIsEmergencia.AutoSize = true;
             this.checkBoxIsEmergencia.Font = new System.Drawing.Font("Montserrat SemiBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBoxIsEmergencia.Location = new System.Drawing.Point(199, 386);
-            this.checkBoxIsEmergencia.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBoxIsEmergencia.Margin = new System.Windows.Forms.Padding(4);
             this.checkBoxIsEmergencia.Name = "checkBoxIsEmergencia";
             this.checkBoxIsEmergencia.Size = new System.Drawing.Size(221, 25);
             this.checkBoxIsEmergencia.TabIndex = 41;
@@ -161,7 +161,7 @@
             this.txtBoxCorreoElectronico.BackColor = System.Drawing.SystemColors.Menu;
             this.txtBoxCorreoElectronico.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBoxCorreoElectronico.Location = new System.Drawing.Point(200, 287);
-            this.txtBoxCorreoElectronico.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBoxCorreoElectronico.Margin = new System.Windows.Forms.Padding(4);
             this.txtBoxCorreoElectronico.Name = "txtBoxCorreoElectronico";
             this.txtBoxCorreoElectronico.Size = new System.Drawing.Size(399, 19);
             this.txtBoxCorreoElectronico.TabIndex = 40;
@@ -174,7 +174,7 @@
             this.maskedTxtBoxTelefonoResidencial.BackColor = System.Drawing.SystemColors.Menu;
             this.maskedTxtBoxTelefonoResidencial.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.maskedTxtBoxTelefonoResidencial.Location = new System.Drawing.Point(200, 171);
-            this.maskedTxtBoxTelefonoResidencial.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.maskedTxtBoxTelefonoResidencial.Margin = new System.Windows.Forms.Padding(4);
             this.maskedTxtBoxTelefonoResidencial.Mask = "(999) 000-0000";
             this.maskedTxtBoxTelefonoResidencial.Name = "maskedTxtBoxTelefonoResidencial";
             this.maskedTxtBoxTelefonoResidencial.PromptChar = ' ';
@@ -190,7 +190,7 @@
             this.maskedTxtBoxTelefonoTrabajo.BackColor = System.Drawing.SystemColors.Menu;
             this.maskedTxtBoxTelefonoTrabajo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.maskedTxtBoxTelefonoTrabajo.Location = new System.Drawing.Point(200, 138);
-            this.maskedTxtBoxTelefonoTrabajo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.maskedTxtBoxTelefonoTrabajo.Margin = new System.Windows.Forms.Padding(4);
             this.maskedTxtBoxTelefonoTrabajo.Mask = "(999) 000-0000";
             this.maskedTxtBoxTelefonoTrabajo.Name = "maskedTxtBoxTelefonoTrabajo";
             this.maskedTxtBoxTelefonoTrabajo.PromptChar = ' ';
@@ -206,7 +206,7 @@
             this.maskedTxtBoxTelefonoPersonal.BackColor = System.Drawing.SystemColors.Menu;
             this.maskedTxtBoxTelefonoPersonal.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.maskedTxtBoxTelefonoPersonal.Location = new System.Drawing.Point(197, 105);
-            this.maskedTxtBoxTelefonoPersonal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.maskedTxtBoxTelefonoPersonal.Margin = new System.Windows.Forms.Padding(4);
             this.maskedTxtBoxTelefonoPersonal.Mask = "(999) 000-0000";
             this.maskedTxtBoxTelefonoPersonal.Name = "maskedTxtBoxTelefonoPersonal";
             this.maskedTxtBoxTelefonoPersonal.PromptChar = ' ';
@@ -222,7 +222,7 @@
             this.txtBoxApodo.BackColor = System.Drawing.SystemColors.Menu;
             this.txtBoxApodo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBoxApodo.Location = new System.Drawing.Point(197, 353);
-            this.txtBoxApodo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBoxApodo.Margin = new System.Windows.Forms.Padding(4);
             this.txtBoxApodo.Name = "txtBoxApodo";
             this.txtBoxApodo.Size = new System.Drawing.Size(399, 19);
             this.txtBoxApodo.TabIndex = 27;
@@ -249,7 +249,7 @@
             this.txtBoxDescripcion.BackColor = System.Drawing.SystemColors.Menu;
             this.txtBoxDescripcion.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBoxDescripcion.Location = new System.Drawing.Point(197, 320);
-            this.txtBoxDescripcion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBoxDescripcion.Margin = new System.Windows.Forms.Padding(4);
             this.txtBoxDescripcion.Name = "txtBoxDescripcion";
             this.txtBoxDescripcion.Size = new System.Drawing.Size(399, 19);
             this.txtBoxDescripcion.TabIndex = 24;
@@ -260,7 +260,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dtpNacimiento.Location = new System.Drawing.Point(199, 247);
-            this.dtpNacimiento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpNacimiento.Margin = new System.Windows.Forms.Padding(4);
             this.dtpNacimiento.Name = "dtpNacimiento";
             this.dtpNacimiento.Size = new System.Drawing.Size(399, 26);
             this.dtpNacimiento.TabIndex = 23;
@@ -299,11 +299,12 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cbCategoria.BackColor = System.Drawing.SystemColors.Menu;
+            this.cbCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbCategoria.FormattingEnabled = true;
             this.cbCategoria.Location = new System.Drawing.Point(197, 204);
-            this.cbCategoria.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbCategoria.Margin = new System.Windows.Forms.Padding(4);
             this.cbCategoria.Name = "cbCategoria";
-            this.cbCategoria.Size = new System.Drawing.Size(397, 29);
+            this.cbCategoria.Size = new System.Drawing.Size(402, 29);
             this.cbCategoria.TabIndex = 20;
             // 
             // label3
@@ -384,7 +385,7 @@
             this.txtBoxApellido.BackColor = System.Drawing.SystemColors.Menu;
             this.txtBoxApellido.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBoxApellido.Location = new System.Drawing.Point(197, 72);
-            this.txtBoxApellido.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBoxApellido.Margin = new System.Windows.Forms.Padding(4);
             this.txtBoxApellido.Name = "txtBoxApellido";
             this.txtBoxApellido.Size = new System.Drawing.Size(401, 19);
             this.txtBoxApellido.TabIndex = 8;
@@ -411,7 +412,7 @@
             this.txtBoxNombre.BackColor = System.Drawing.SystemColors.Menu;
             this.txtBoxNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBoxNombre.Location = new System.Drawing.Point(197, 39);
-            this.txtBoxNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBoxNombre.Margin = new System.Windows.Forms.Padding(4);
             this.txtBoxNombre.Name = "txtBoxNombre";
             this.txtBoxNombre.Size = new System.Drawing.Size(401, 19);
             this.txtBoxNombre.TabIndex = 3;
@@ -440,7 +441,7 @@
             this.bttnEliminar.Font = new System.Drawing.Font("Montserrat", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bttnEliminar.ForeColor = System.Drawing.SystemColors.Highlight;
             this.bttnEliminar.Location = new System.Drawing.Point(638, 488);
-            this.bttnEliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bttnEliminar.Margin = new System.Windows.Forms.Padding(4);
             this.bttnEliminar.Name = "bttnEliminar";
             this.bttnEliminar.Size = new System.Drawing.Size(229, 42);
             this.bttnEliminar.TabIndex = 41;
@@ -458,7 +459,7 @@
             this.bttnActualizar.Font = new System.Drawing.Font("Montserrat", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bttnActualizar.ForeColor = System.Drawing.SystemColors.Highlight;
             this.bttnActualizar.Location = new System.Drawing.Point(638, 438);
-            this.bttnActualizar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bttnActualizar.Margin = new System.Windows.Forms.Padding(4);
             this.bttnActualizar.Name = "bttnActualizar";
             this.bttnActualizar.Size = new System.Drawing.Size(230, 42);
             this.bttnActualizar.TabIndex = 42;
@@ -473,7 +474,7 @@
             this.bttnSubirFoto.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Highlight;
             this.bttnSubirFoto.Font = new System.Drawing.Font("Montserrat", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bttnSubirFoto.Location = new System.Drawing.Point(637, 370);
-            this.bttnSubirFoto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bttnSubirFoto.Margin = new System.Windows.Forms.Padding(4);
             this.bttnSubirFoto.Name = "bttnSubirFoto";
             this.bttnSubirFoto.Size = new System.Drawing.Size(231, 42);
             this.bttnSubirFoto.TabIndex = 43;
@@ -492,7 +493,7 @@
             this.Controls.Add(this.gbDatosPersonales);
             this.Controls.Add(this.pbFoto);
             this.Controls.Add(this.lblActualizarContacto);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "InformacionContacto";
             this.Text = "InfomacionContacto";
             ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).EndInit();
