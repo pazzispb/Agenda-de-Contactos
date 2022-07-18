@@ -33,7 +33,7 @@ namespace AgendaContactos
             txtBoxDescripcion.Text = contacto.Descripcion;
             txtBoxApodo.Text = contacto.Apodo;
             dtpNacimiento.Value = contacto.FechaNacimiento;
-            pbFoto.ImageLocation = contacto.UrlFoto;
+            if (contacto.UrlFoto != null) { pbFoto.Image = Image.FromFile(contacto.UrlFoto); }
             checkBoxIsFavorito.Checked = contacto.isFavorito;
             checkBoxIsEmergencia.Checked = contacto.isEmergencia;
             maskedTxtBoxTelefonoPersonal.Text = contacto.TelefonoPersonal;
@@ -105,6 +105,7 @@ namespace AgendaContactos
             listadoContactos[index].isFavorito = checkBoxIsFavorito.Checked;
             listadoContactos[index].isEmergencia = checkBoxIsEmergencia.Checked;
             listadoContactos[index].UrlFoto = pbFoto.ImageLocation;
+
             json.GuardarContactos(listadoContactos); // Se guardaran los cambios al Json
             MessageBox.Show("Cambios guardados con exito", "EXITO", MessageBoxButtons.OK, MessageBoxIcon.Information);
             Program.aplicacion.abrirSubFormulario(new VisualizarContactos()); // Regresara a la pantalla de inicio
@@ -121,5 +122,15 @@ namespace AgendaContactos
             Program.aplicacion.abrirSubFormulario(new VisualizarContactos()); // Regresara a la pantalla de inicio
         }
 
+        private void bttnSubirFoto_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog buscarFoto = new OpenFileDialog();
+            buscarFoto.Filter = "Image files(*.jpg; *.jpeg; *.gif; *.bmp)|*.jpg; *.jpeg; *.gif; *.bmp";
+            if (buscarFoto.ShowDialog() == DialogResult.OK)
+            {
+                pbFoto.ImageLocation = buscarFoto.FileName;
+
+            }
+        }
     }
 }
