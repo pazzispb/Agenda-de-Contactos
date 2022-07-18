@@ -18,7 +18,7 @@ namespace AgendaContactos
         {
             InitializeComponent();
             this.id = id;
-            EstadoInicial(); 
+            EstadoInicial();
         }
 
         void EstadoInicial() // Este es el estado en el que se presentara el form
@@ -43,7 +43,9 @@ namespace AgendaContactos
 
         bool ValidarCamposObligatorios() //confirmara los campos vacios 
         {
-            return (String.IsNullOrWhiteSpace(txtBoxNombre.Text));
+            return (String.IsNullOrWhiteSpace(txtBoxNombre.Text)|| String.IsNullOrWhiteSpace(txtBoxApellido.Text)
+                || String.IsNullOrWhiteSpace(maskedTxtBoxTelefonoPersonal.Text) || String.IsNullOrWhiteSpace(maskedTxtBoxTelefonoResidencial.Text)
+                || String.IsNullOrWhiteSpace(maskedTxtBoxTelefonoTrabajo.Text));
         }
 
         bool ValidarNombreUnico(string nombre)  //confirmara que no exista otra persona igual en la lista de contacto
@@ -59,8 +61,6 @@ namespace AgendaContactos
         }
         private void bttnActualizar_Click(object sender, EventArgs e)
         {
-
-
             if (ValidarCamposObligatorios()) // En caso de campo vacio, mostrara mensaje por pantalla un mensaje de alerta
             {
                 MessageBox.Show("Rellene los campos vacios", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -88,7 +88,6 @@ namespace AgendaContactos
             listadoContactos[index].isFavorito = checkBoxIsFavorito.Checked;
             listadoContactos[index].isEmergencia = checkBoxIsEmergencia.Checked;
             listadoContactos[index].UrlFoto = pbFoto.ImageLocation;
-
             json.GuardarContactos(listadoContactos); // Se guardaran los cambios al Json
             MessageBox.Show("Cambios guardados con exito", "EXITO", MessageBoxButtons.OK, MessageBoxIcon.Information);
             Program.aplicacion.abrirSubFormulario(new VisualizarContactos()); // Regresara a la pantalla de inicio
