@@ -20,12 +20,6 @@ namespace AgendaContactos
             CargarContactos();
             dgvContactos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;//Permite que las columnas se ajuste el ancho de manera automatica
         }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         void CargarContactos(string busqueda = null)
         {
             var json = new Json();
@@ -37,10 +31,10 @@ namespace AgendaContactos
                     TelefonoPersonal = x.TelefonoPersonal,
                     TelefonoTrabajo = x.TelefonoTrabajo,
                     TelefonoResidencial = x.TelefonoResidencial
-                }).ToList();//Elegimos 4 campos a mostrar dentro del datagrid
+                }).ToList();//Elegimos 5 campos a mostrar dentro del datagrid, pero el id no se ve
             if(!string.IsNullOrWhiteSpace(busqueda))
             {
-                foreach(var contacto in listadoProyectado)
+                foreach(var contacto in listadoProyectado) //quita los nulos de los campos de la lista
                 {
                     var indice = listadoProyectado.IndexOf(contacto);
                     if (contacto.Nombre == null) listadoProyectado[indice].Nombre = "";
@@ -76,11 +70,6 @@ namespace AgendaContactos
                 var id = Convert.ToInt32(dgvContactos.CurrentRow.Cells["Id"].Value);
                 Program.aplicacion.abrirSubFormulario(new InformacionContacto(id));
             }
-        }
-
-        private void VisualizarContactos_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

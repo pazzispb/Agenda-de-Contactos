@@ -14,16 +14,15 @@ namespace AgendaContactos
 {
     public partial class AgregarContacto : Form
     {
-        int id; //Id del contacto 
+        int id = 0; //Id del contacto 
         Contacto contacto = null; //contacto a crear
         List<Contacto> listadoContacto = null;
-        Categoria categoria = null; //Categoria a eliminar o actualizar
-        List<Categoria> listadoCategoria;
 
         public AgregarContacto()
         {
             InitializeComponent();
             SetEstadoInicial();
+            CargarCategorias();
         }
 
         void SetEstadoInicial()
@@ -33,6 +32,7 @@ namespace AgendaContactos
             contacto = null;
             BorrarCampos();
             CargarContactos();
+            
         }
         void BorrarCampos()
         {
@@ -43,13 +43,12 @@ namespace AgendaContactos
                     c.Text = string.Empty;
                 }
             }
-            txtBoxNombre.Clear();
             pbFoto.ImageLocation = null;
         }
 
         bool ValidarCamposObligatorios()//responde a la pregunta de: hay campos obligatorios vacios?
         {
-            return (String.IsNullOrWhiteSpace(txtBoxNombre.Text) || String.IsNullOrWhiteSpace(txtBoxApellido.Text)
+            return (String.IsNullOrWhiteSpace(txtBoxNombre.Text) || String.IsNullOrWhiteSpace(txtBoxApellido.Text) || String.IsNullOrWhiteSpace(cbCategoria.Text)
                 || (String.IsNullOrWhiteSpace(maskedTxtBoxTelefonoPersonal.Text) && String.IsNullOrWhiteSpace(maskedTxtBoxTelefonoResidencial.Text)
                 && String.IsNullOrWhiteSpace(maskedTxtBoxTelefonoTrabajo.Text)));
         }
@@ -82,7 +81,7 @@ namespace AgendaContactos
                 MessageBox.Show("El nombre que introdujo ya existe", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            if (!IsValidEmail(txtBoxCorreoElectronico.Text))
+            if (!IsValidEmail(txtBoxCorreoElectronico.Text) && !String.IsNullOrWhiteSpace(txtBoxCorreoElectronico.Text))
             {
                 MessageBox.Show("El correo electronico no es valido", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -126,15 +125,14 @@ namespace AgendaContactos
 
         private void cbCategoria_Click(object sender, EventArgs e)
         {
+            CargarCategorias();
+        }
+        void CargarCategorias()
+        {
             var json = new Json();
             cbCategoria.DataSource = json.ObtenerCategorias().FindAll(x => x.isVisible == true);
             cbCategoria.DisplayMember = "Nombre";
             cbCategoria.ValueMember = "Nombre";
-        }
-
-        private void AgregarContacto_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

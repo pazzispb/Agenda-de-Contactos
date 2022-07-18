@@ -233,7 +233,6 @@
             this.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "Categorias";
             this.Text = "Categorias";
-            this.SizeChanged += new System.EventHandler(this.Categorias_SizeChanged);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCategorias)).EndInit();
             this.panel.ResumeLayout(false);
             this.gbDatos.ResumeLayout(false);

@@ -148,7 +148,7 @@ namespace AgendaContactos
         private void btnGuardarCambios_Click(object sender, EventArgs e)
         {
             var json = new Json();
-            var lista = new List<Contacto>();
+            var lista = new List<Contacto>();//lista de contactos a exportar o importar
             var contador = 0; //contador para saber cuantos contactos se seleccionaron del datagrid
             foreach (DataGridViewRow row in dgvContactos.Rows) //recorre cada una de las filas del datagrid
             {
@@ -157,6 +157,7 @@ namespace AgendaContactos
                     contador++;
                     var contacto = new Contacto
                     {
+                        
                         Nombres = (string)row.Cells["Nombres"].Value,
                         Apellidos = (string)row.Cells["Apellidos"].Value,
                         TelefonoPersonal = (string)row.Cells["TelefonoPersonal"].Value,

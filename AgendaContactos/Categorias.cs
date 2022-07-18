@@ -107,7 +107,7 @@ namespace AgendaContactos
 
         private void dgvCategorias_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex > -1)
+            if (e.RowIndex > -1) //si no clickee dentro del hearder de la columna
             {
                 var nombre = dgvCategorias.CurrentRow.Cells["Nombre"].Value.ToString(); //almacena el nombre de la categoria
                 categoria = listadoCategoria.FirstOrDefault(x => x.Nombre == nombre); //almacena el objeto categoria
@@ -131,11 +131,5 @@ namespace AgendaContactos
             }
         }
 
-        private void Categorias_SizeChanged(object sender, EventArgs e)
-        {
-            //ConfigurarFormulario();
-        }
-
-        
     }
 }

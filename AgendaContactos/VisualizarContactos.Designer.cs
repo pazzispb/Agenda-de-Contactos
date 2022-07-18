@@ -80,7 +80,6 @@
             this.txtBoxFiltro.Name = "txtBoxFiltro";
             this.txtBoxFiltro.Size = new System.Drawing.Size(480, 25);
             this.txtBoxFiltro.TabIndex = 1;
-            this.txtBoxFiltro.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // bttnBuscar
             // 
@@ -116,7 +115,6 @@
             this.Controls.Add(this.dgvContactos);
             this.Name = "VisualizarContactos";
             this.Text = "VisualizarContactos";
-            this.Load += new System.EventHandler(this.VisualizarContactos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvContactos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

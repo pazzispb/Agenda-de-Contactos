@@ -483,7 +483,6 @@
             this.KeyPreview = true;
             this.Name = "AgregarContacto";
             this.Text = "AgregarContacto";
-            this.Load += new System.EventHandler(this.AgregarContacto_Load);
             this.gbDatosPersonales.ResumeLayout(false);
             this.gbDatosPersonales.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).EndInit();

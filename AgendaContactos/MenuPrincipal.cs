@@ -96,7 +96,6 @@ namespace AgendaContactos
         private void iconButton1_Click(object sender, EventArgs e)
         {
             abrirSubFormulario(new ImportarExportar());
-
         }
     }
 }

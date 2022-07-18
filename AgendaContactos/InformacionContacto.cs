@@ -47,11 +47,9 @@ namespace AgendaContactos
             cbCategoria.DisplayMember = "Nombre";
             cbCategoria.ValueMember = "Nombre";
         }
-
-
         bool ValidarCamposObligatorios() //confirmara los campos vacios 
         {
-            return (String.IsNullOrWhiteSpace(txtBoxNombre.Text)|| String.IsNullOrWhiteSpace(txtBoxApellido.Text)
+            return (String.IsNullOrWhiteSpace(txtBoxNombre.Text) || String.IsNullOrWhiteSpace(txtBoxApellido.Text) || String.IsNullOrWhiteSpace(cbCategoria.Text)
                 || (String.IsNullOrWhiteSpace(maskedTxtBoxTelefonoPersonal.Text) && String.IsNullOrWhiteSpace(maskedTxtBoxTelefonoResidencial.Text)
                 && String.IsNullOrWhiteSpace(maskedTxtBoxTelefonoTrabajo.Text)));
         }
@@ -65,7 +63,7 @@ namespace AgendaContactos
                 x => ((x.Nombres + " " + x.Apellidos).ToLower().Trim() == nombre.ToLower().Trim()) //si el nombre y el apellido es igual a alguno de los contactos registrados
                 && (x.Id != id) //si no es el id del contacto que se esta visualizando
                 );
-            return (cantidad < 1);     
+            return (cantidad < 1);//si se cumple que la cantidad es menor que 1 es unico, de lo contrario no es unico     
         }
         static bool IsValidEmail(string email) => EmailFormat.IsMatch(email);
         static readonly Regex EmailFormat = new Regex(@"^(?("")("".+?(?<!\\)""@)|(([0-9a-z]((\.(?!\.))|[-!#\$%&'\*\+/=\?\^`\{\}\|~\w])*)(?<=[0-9a-z])@))(?(\[)(\[(\d{1,3}\.){3}\d{1,3}\])|(([0-9a-z][-\w]*[0-9a-z]*\.)+[a-z0-9][\-a-z0-9]{0,22}[a-z0-9]))$");
@@ -82,7 +80,7 @@ namespace AgendaContactos
                 MessageBox.Show("El nombre que introdujo ya existe", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            if (!IsValidEmail(txtBoxCorreoElectronico.Text))
+            if (!IsValidEmail(txtBoxCorreoElectronico.Text) && !String.IsNullOrWhiteSpace(txtBoxCorreoElectronico.Text))
             {
                 MessageBox.Show("El correo electronico no es valido", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -115,7 +113,6 @@ namespace AgendaContactos
             var json = new Json();
             var listadoContactos = json.ObtenerContactos();
             Contacto contacto = listadoContactos.FirstOrDefault(x => x.Id == id);
-            var index = listadoContactos.IndexOf(contacto);
             listadoContactos.Remove(contacto); // Tomara el contacto y lo eliminara de la lista
             json.GuardarContactos(listadoContactos); // Se guardaran los cambios en el Json
             MessageBox.Show("Contacto eliminado con exito", "EXITO", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -129,7 +126,6 @@ namespace AgendaContactos
             if (buscarFoto.ShowDialog() == DialogResult.OK)
             {
                 pbFoto.ImageLocation = buscarFoto.FileName;
-
             }
         }
     }
