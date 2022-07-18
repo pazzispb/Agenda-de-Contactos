@@ -18,5 +18,7 @@ namespace AgendaContactos
             InitializeComponent();
             this.id = id;
         }
+
+
     }
 }
