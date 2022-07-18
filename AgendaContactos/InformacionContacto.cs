@@ -14,15 +14,18 @@ namespace AgendaContactos
     public partial class InformacionContacto : Form
     {
         int id; //Id del contacto cuyos datos se mostraran en este formulario
+        List<Categoria> listado = new List<Categoria>();
         public InformacionContacto(int id)
         {
             InitializeComponent();
             this.id = id;
             var json = new Json();
-            cbCategoria.DataSource = json.ObtenerCategorias();
+            cbCategoria.DataSource = null;
+            listado = json.ObtenerCategorias();
+            cbCategoria.DataSource = listado;
             cbCategoria.DisplayMember = "Nombre";
+            cbCategoria.ValueMember = "Nombre";
             EstadoInicial();
-
         }
 
         void EstadoInicial() // Este es el estado en el que se presentara el form
@@ -34,7 +37,8 @@ namespace AgendaContactos
             maskedTxtBoxTelefonoPersonal.Text = contacto.TelefonoPersonal;
             maskedTxtBoxTelefonoResidencial.Text = contacto.TelefonoResidencial;
             maskedTxtBoxTelefonoTrabajo.Text = contacto.TelefonoTrabajo;
-            //cbCategoria.SelectedIndex = cbCategoria.Items.IndexOf(contacto.Categoria); // Cada dato se va a mostrar con el equivalente al dato ya registrado del contacto
+            var categoria = listado.FirstOrDefault(x => x.Nombre == contacto.Categoria);
+            cbCategoria.SelectedIndex = listado.IndexOf(categoria); // Cada dato se va a mostrar con el equivalente al dato ya registrado del contacto
             dtpNacimiento.Value = contacto.FechaNacimiento;
             txtBoxCorreoElectronico.Text = contacto.CorreoElectronico;
             txtBoxDescripcion.Text = contacto.Descripcion;
@@ -50,7 +54,7 @@ namespace AgendaContactos
             return (String.IsNullOrWhiteSpace(txtBoxNombre.Text)|| String.IsNullOrWhiteSpace(txtBoxApellido.Text)
                 || String.IsNullOrWhiteSpace(maskedTxtBoxTelefonoPersonal.Text) || String.IsNullOrWhiteSpace(maskedTxtBoxTelefonoResidencial.Text)
                 || String.IsNullOrWhiteSpace(maskedTxtBoxTelefonoTrabajo.Text)
-                || String.IsNullOrWhiteSpace(cbCategoria.Text));
+                );
         }
 
         bool ValidarNombreUnico(string nombre)  //confirmara que no exista otra persona igual en la lista de contacto
