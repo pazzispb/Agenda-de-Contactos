@@ -393,6 +393,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.checkBoxIsFavorito.AutoSize = true;
             this.checkBoxIsFavorito.Font = new System.Drawing.Font("Montserrat SemiBold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxIsFavorito.ForeColor = System.Drawing.Color.Black;
             this.checkBoxIsFavorito.Location = new System.Drawing.Point(467, 333);
             this.checkBoxIsFavorito.Name = "checkBoxIsFavorito";
             this.checkBoxIsFavorito.Size = new System.Drawing.Size(133, 20);
@@ -407,6 +408,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.checkBoxIsEmergencia.AutoSize = true;
             this.checkBoxIsEmergencia.Font = new System.Drawing.Font("Montserrat SemiBold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxIsEmergencia.ForeColor = System.Drawing.Color.Black;
             this.checkBoxIsEmergencia.Location = new System.Drawing.Point(467, 355);
             this.checkBoxIsEmergencia.Name = "checkBoxIsEmergencia";
             this.checkBoxIsEmergencia.Size = new System.Drawing.Size(176, 20);

@@ -63,8 +63,7 @@
             // 
             // gbDatosPersonales
             // 
-            this.gbDatosPersonales.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.gbDatosPersonales.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gbDatosPersonales.Controls.Add(this.checkBoxIsFavorito);
             this.gbDatosPersonales.Controls.Add(this.checkBoxIsEmergencia);
@@ -101,6 +100,32 @@
             this.gbDatosPersonales.TabIndex = 5;
             this.gbDatosPersonales.TabStop = false;
             this.gbDatosPersonales.Text = "Datos Personales";
+            // 
+            // checkBoxIsFavorito
+            // 
+            this.checkBoxIsFavorito.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.checkBoxIsFavorito.AutoSize = true;
+            this.checkBoxIsFavorito.Font = new System.Drawing.Font("Montserrat Medium", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxIsFavorito.ForeColor = System.Drawing.Color.Black;
+            this.checkBoxIsFavorito.Location = new System.Drawing.Point(435, 373);
+            this.checkBoxIsFavorito.Name = "checkBoxIsFavorito";
+            this.checkBoxIsFavorito.Size = new System.Drawing.Size(125, 19);
+            this.checkBoxIsFavorito.TabIndex = 42;
+            this.checkBoxIsFavorito.Text = "Contacto favorito";
+            this.checkBoxIsFavorito.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxIsEmergencia
+            // 
+            this.checkBoxIsEmergencia.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.checkBoxIsEmergencia.AutoSize = true;
+            this.checkBoxIsEmergencia.Font = new System.Drawing.Font("Montserrat Medium", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxIsEmergencia.ForeColor = System.Drawing.Color.Black;
+            this.checkBoxIsEmergencia.Location = new System.Drawing.Point(435, 350);
+            this.checkBoxIsEmergencia.Name = "checkBoxIsEmergencia";
+            this.checkBoxIsEmergencia.Size = new System.Drawing.Size(168, 19);
+            this.checkBoxIsEmergencia.TabIndex = 41;
+            this.checkBoxIsEmergencia.Text = "Contacto de emergencia";
+            this.checkBoxIsEmergencia.UseVisualStyleBackColor = true;
             // 
             // txtBoxCorreoElectronico
             // 
@@ -393,7 +418,7 @@
             // 
             // bttnCancelar
             // 
-            this.bttnCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.bttnCancelar.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.bttnCancelar.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.bttnCancelar.FlatAppearance.BorderSize = 0;
             this.bttnCancelar.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Highlight;
@@ -411,8 +436,7 @@
             // 
             // bttnCrear
             // 
-            this.bttnCrear.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.bttnCrear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.bttnCrear.BackColor = System.Drawing.Color.Transparent;
             this.bttnCrear.FlatAppearance.BorderSize = 0;
             this.bttnCrear.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Highlight;
@@ -471,7 +495,7 @@
             // 
             // bttnSubirFoto
             // 
-            this.bttnSubirFoto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.bttnSubirFoto.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.bttnSubirFoto.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Highlight;
             this.bttnSubirFoto.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Highlight;
             this.bttnSubirFoto.Font = new System.Drawing.Font("Montserrat", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -486,8 +510,7 @@
             // 
             // pbFoto
             // 
-            this.pbFoto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbFoto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pbFoto.BackColor = System.Drawing.SystemColors.ControlLight;
             this.pbFoto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pbFoto.Image = ((System.Drawing.Image)(resources.GetObject("pbFoto.Image")));
