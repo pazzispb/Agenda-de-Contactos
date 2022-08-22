@@ -1,4 +1,4 @@
-# PROYECTO_FINAL_DSS2
+# PROYECTO_FINAL_341
 Repositorio para el proyecto final de la asignatura de Desarrollo de Software II, sección 3
 
 ## Integrantes del grupo:
